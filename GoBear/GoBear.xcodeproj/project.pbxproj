@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		002BA51221DF743A00005237 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002BA51121DF743A00005237 /* AppDelegate.swift */; };
+		002BA51421DF743A00005237 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002BA51321DF743A00005237 /* ViewController.swift */; };
+		002BA51721DF743A00005237 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 002BA51521DF743A00005237 /* Main.storyboard */; };
+		002BA51921DF743A00005237 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 002BA51821DF743A00005237 /* Assets.xcassets */; };
+		002BA51C21DF743A00005237 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 002BA51A21DF743A00005237 /* LaunchScreen.storyboard */; };
+		002BA52721DF743B00005237 /* GoBearUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002BA52621DF743B00005237 /* GoBearUITests.swift */; };
+		F4D4377197F5607F3EC98573 /* Pods_GoBear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5773DEC8D34945C656697BDE /* Pods_GoBear.framework */; };
+		FA1A280D7893507E4BA09B81 /* Pods_GoBearUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F50F3F85E76AAE0D00B4BAF /* Pods_GoBearUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		002BA52321DF743B00005237 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 002BA50621DF743A00005237 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 002BA50D21DF743A00005237;
+			remoteInfo = GoBear;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		002BA50E21DF743A00005237 /* GoBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		002BA51121DF743A00005237 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		002BA51321DF743A00005237 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		002BA51621DF743A00005237 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		002BA51821DF743A00005237 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		002BA51B21DF743A00005237 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		002BA51D21DF743A00005237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		002BA52221DF743B00005237 /* GoBearUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoBearUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		002BA52621DF743B00005237 /* GoBearUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBearUITests.swift; sourceTree = "<group>"; };
+		002BA52821DF743B00005237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F50F3F85E76AAE0D00B4BAF /* Pods_GoBearUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoBearUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		482D219DD1049BD87416EC55 /* Pods-GoBearUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoBearUITests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-GoBearUITests/Pods-GoBearUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5773DEC8D34945C656697BDE /* Pods_GoBear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoBear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ADEFDDDD0E9B62DD6825A95 /* Pods-GoBear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoBear.release.xcconfig"; path = "../Pods/Target Support Files/Pods-GoBear/Pods-GoBear.release.xcconfig"; sourceTree = "<group>"; };
+		AC4366697A351E537C25F0DD /* Pods-GoBear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoBear.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-GoBear/Pods-GoBear.debug.xcconfig"; sourceTree = "<group>"; };
+		D91B8323AFDA5094FCAD6C9F /* Pods-GoBearUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoBearUITests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-GoBearUITests/Pods-GoBearUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		002BA50B21DF743A00005237 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4D4377197F5607F3EC98573 /* Pods_GoBear.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		002BA51F21DF743B00005237 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA1A280D7893507E4BA09B81 /* Pods_GoBearUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		002BA50521DF743A00005237 = {
+			isa = PBXGroup;
+			children = (
+				002BA51021DF743A00005237 /* GoBear */,
+				002BA52521DF743B00005237 /* GoBearUITests */,
+				002BA50F21DF743A00005237 /* Products */,
+				7C27843DCCB6859A85ACF8B5 /* Pods */,
+				D5B3BB010AD75CF3A6DE8C5C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		002BA50F21DF743A00005237 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				002BA50E21DF743A00005237 /* GoBear.app */,
+				002BA52221DF743B00005237 /* GoBearUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		002BA51021DF743A00005237 /* GoBear */ = {
+			isa = PBXGroup;
+			children = (
+				002BA51121DF743A00005237 /* AppDelegate.swift */,
+				002BA51321DF743A00005237 /* ViewController.swift */,
+				002BA51521DF743A00005237 /* Main.storyboard */,
+				002BA51821DF743A00005237 /* Assets.xcassets */,
+				002BA51A21DF743A00005237 /* LaunchScreen.storyboard */,
+				002BA51D21DF743A00005237 /* Info.plist */,
+			);
+			path = GoBear;
+			sourceTree = "<group>";
+		};
+		002BA52521DF743B00005237 /* GoBearUITests */ = {
+			isa = PBXGroup;
+			children = (
+				002BA52621DF743B00005237 /* GoBearUITests.swift */,
+				002BA52821DF743B00005237 /* Info.plist */,
+			);
+			path = GoBearUITests;
+			sourceTree = "<group>";
+		};
+		7C27843DCCB6859A85ACF8B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AC4366697A351E537C25F0DD /* Pods-GoBear.debug.xcconfig */,
+				8ADEFDDDD0E9B62DD6825A95 /* Pods-GoBear.release.xcconfig */,
+				482D219DD1049BD87416EC55 /* Pods-GoBearUITests.debug.xcconfig */,
+				D91B8323AFDA5094FCAD6C9F /* Pods-GoBearUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D5B3BB010AD75CF3A6DE8C5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5773DEC8D34945C656697BDE /* Pods_GoBear.framework */,
+				0F50F3F85E76AAE0D00B4BAF /* Pods_GoBearUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		002BA50D21DF743A00005237 /* GoBear */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 002BA52B21DF743B00005237 /* Build configuration list for PBXNativeTarget "GoBear" */;
+			buildPhases = (
+				8FFE57B29D0183205E981A56 /* [CP] Check Pods Manifest.lock */,
+				002BA50A21DF743A00005237 /* Sources */,
+				002BA50B21DF743A00005237 /* Frameworks */,
+				002BA50C21DF743A00005237 /* Resources */,
+				F77FCF5026819EBF57C5F659 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoBear;
+			productName = GoBear;
+			productReference = 002BA50E21DF743A00005237 /* GoBear.app */;
+			productType = "com.apple.product-type.application";
+		};
+		002BA52121DF743B00005237 /* GoBearUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 002BA52E21DF743B00005237 /* Build configuration list for PBXNativeTarget "GoBearUITests" */;
+			buildPhases = (
+				F850055ACE94FEFCEC555BB5 /* [CP] Check Pods Manifest.lock */,
+				002BA51E21DF743B00005237 /* Sources */,
+				002BA51F21DF743B00005237 /* Frameworks */,
+				002BA52021DF743B00005237 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				002BA52421DF743B00005237 /* PBXTargetDependency */,
+			);
+			name = GoBearUITests;
+			productName = GoBearUITests;
+			productReference = 002BA52221DF743B00005237 /* GoBearUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		002BA50621DF743A00005237 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = GoBear;
+				TargetAttributes = {
+					002BA50D21DF743A00005237 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					002BA52121DF743B00005237 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 002BA50D21DF743A00005237;
+					};
+				};
+			};
+			buildConfigurationList = 002BA50921DF743A00005237 /* Build configuration list for PBXProject "GoBear" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 002BA50521DF743A00005237;
+			productRefGroup = 002BA50F21DF743A00005237 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				002BA50D21DF743A00005237 /* GoBear */,
+				002BA52121DF743B00005237 /* GoBearUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		002BA50C21DF743A00005237 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				002BA51C21DF743A00005237 /* LaunchScreen.storyboard in Resources */,
+				002BA51921DF743A00005237 /* Assets.xcassets in Resources */,
+				002BA51721DF743A00005237 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		002BA52021DF743B00005237 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8FFE57B29D0183205E981A56 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoBear-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F77FCF5026819EBF57C5F659 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-GoBear/Pods-GoBear-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-GoBear/Pods-GoBear-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F850055ACE94FEFCEC555BB5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoBearUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		002BA50A21DF743A00005237 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				002BA51421DF743A00005237 /* ViewController.swift in Sources */,
+				002BA51221DF743A00005237 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		002BA51E21DF743B00005237 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				002BA52721DF743B00005237 /* GoBearUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		002BA52421DF743B00005237 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 002BA50D21DF743A00005237 /* GoBear */;
+			targetProxy = 002BA52321DF743B00005237 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		002BA51521DF743A00005237 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				002BA51621DF743A00005237 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		002BA51A21DF743A00005237 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				002BA51B21DF743A00005237 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		002BA52921DF743B00005237 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		002BA52A21DF743B00005237 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		002BA52C21DF743B00005237 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC4366697A351E537C25F0DD /* Pods-GoBear.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L76363ZU66;
+				INFOPLIST_FILE = GoBear/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gb.GoBear;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		002BA52D21DF743B00005237 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8ADEFDDDD0E9B62DD6825A95 /* Pods-GoBear.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L76363ZU66;
+				INFOPLIST_FILE = GoBear/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gb.GoBear;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		002BA52F21DF743B00005237 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 482D219DD1049BD87416EC55 /* Pods-GoBearUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L76363ZU66;
+				INFOPLIST_FILE = GoBearUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gb.GoBearUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GoBear;
+			};
+			name = Debug;
+		};
+		002BA53021DF743B00005237 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D91B8323AFDA5094FCAD6C9F /* Pods-GoBearUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L76363ZU66;
+				INFOPLIST_FILE = GoBearUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gb.GoBearUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GoBear;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		002BA50921DF743A00005237 /* Build configuration list for PBXProject "GoBear" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				002BA52921DF743B00005237 /* Debug */,
+				002BA52A21DF743B00005237 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		002BA52B21DF743B00005237 /* Build configuration list for PBXNativeTarget "GoBear" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				002BA52C21DF743B00005237 /* Debug */,
+				002BA52D21DF743B00005237 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		002BA52E21DF743B00005237 /* Build configuration list for PBXNativeTarget "GoBearUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				002BA52F21DF743B00005237 /* Debug */,
+				002BA53021DF743B00005237 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 002BA50621DF743A00005237 /* Project object */;
+}
