@@ -1,5 +1,5 @@
 //
-//  GoBearProductsRequest.swift
+//  GoBearProductDetailRequest.swift
 //  GoBearCore
 //
 //  Created by Huy Nguyen on 1/5/19.
@@ -9,10 +9,10 @@
 import Foundation
 import Alamofire
 
-final class GoBearProductsRequest: Request {
+final class GoBearProductDetailRequest: Request {
     
     // Type
-    typealias Element = [ProductObj]
+    typealias Element = ProductObj
     
     // Endpoint
     var endpoint: String { return Constant.GoBearApi.BaseSanboxURL }
@@ -21,14 +21,12 @@ final class GoBearProductsRequest: Request {
     var httpMethod: HTTPMethod { return .get }
     
     // Decode
-    func decode(data: Any) throws -> Element? {
+    func decode(data: Any) throws -> ProductObj? {
         
         guard let result = data as? Data else {
             return nil
         }
         
-        let products = self.parserXML(result)[Constant.Object.Product.Item].all
-        
-        return try products.map { try ProductObj($0) }
+        return try ProductObj(self.parserXML(result))
     }
 }

@@ -28,6 +28,7 @@
 		002BA56621E06AA600005237 /* Request+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002BA56521E06AA600005237 /* Request+Default.swift */; };
 		00E896C521E076B400409F69 /* GoBearProductsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E896C421E076B400409F69 /* GoBearProductsRequest.swift */; };
 		00E896C721E0775800409F69 /* ProductObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E896C621E0775800409F69 /* ProductObj.swift */; };
+		00E896C921E0832800409F69 /* GoBearProductDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E896C821E0832800409F69 /* GoBearProductDetailRequest.swift */; };
 		B95452F0B8163218454A5939 /* Pods_GoBearCoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41ED2A234173DE8661892449 /* Pods_GoBearCoreTests.framework */; };
 		D8BAFA7FB3234D47938DAF52 /* Pods_GoBearCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F9A8E3B548394BC4086808 /* Pods_GoBearCore.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		002BA56521E06AA600005237 /* Request+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Request+Default.swift"; sourceTree = "<group>"; };
 		00E896C421E076B400409F69 /* GoBearProductsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBearProductsRequest.swift; sourceTree = "<group>"; };
 		00E896C621E0775800409F69 /* ProductObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductObj.swift; sourceTree = "<group>"; };
+		00E896C821E0832800409F69 /* GoBearProductDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBearProductDetailRequest.swift; sourceTree = "<group>"; };
 		1531E9887FDF1CFD73AA5A6D /* Pods-GoBearCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoBearCore.release.xcconfig"; path = "../Pods/Target Support Files/Pods-GoBearCore/Pods-GoBearCore.release.xcconfig"; sourceTree = "<group>"; };
 		1597EA3E127B335F305A8A9D /* Pods-GoBearCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoBearCore.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-GoBearCore/Pods-GoBearCore.debug.xcconfig"; sourceTree = "<group>"; };
 		41ED2A234173DE8661892449 /* Pods_GoBearCoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoBearCoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -217,6 +219,7 @@
 			children = (
 				002BA55921E05B5800005237 /* Protocols */,
 				00E896C421E076B400409F69 /* GoBearProductsRequest.swift */,
+				00E896C821E0832800409F69 /* GoBearProductDetailRequest.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				002BA54421DFAEEE00005237 /* AuthenticationState.swift in Sources */,
 				002BA55721E058BB00005237 /* UIView+Identifier.swift in Sources */,
 				002BA53E21DFABEC00005237 /* BaseViewController.swift in Sources */,
+				00E896C921E0832800409F69 /* GoBearProductDetailRequest.swift in Sources */,
 				002BA56621E06AA600005237 /* Request+Default.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
