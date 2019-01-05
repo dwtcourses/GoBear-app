@@ -89,12 +89,10 @@
 		002BA51021DF743A00005237 /* GoBear */ = {
 			isa = PBXGroup;
 			children = (
+				002BA53821DF77E500005237 /* Constants */,
+				002BA53721DF77C300005237 /* Sources */,
+				002BA53321DF779600005237 /* Resources */,
 				002BA51121DF743A00005237 /* AppDelegate.swift */,
-				002BA51321DF743A00005237 /* ViewController.swift */,
-				002BA51521DF743A00005237 /* Main.storyboard */,
-				002BA51821DF743A00005237 /* Assets.xcassets */,
-				002BA51A21DF743A00005237 /* LaunchScreen.storyboard */,
-				002BA51D21DF743A00005237 /* Info.plist */,
 			);
 			path = GoBear;
 			sourceTree = "<group>";
@@ -106,6 +104,56 @@
 				002BA52821DF743B00005237 /* Info.plist */,
 			);
 			path = GoBearUITests;
+			sourceTree = "<group>";
+		};
+		002BA53321DF779600005237 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				002BA53521DF77AE00005237 /* Storyboards */,
+				002BA53421DF77A100005237 /* Assets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		002BA53421DF77A100005237 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				002BA51821DF743A00005237 /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		002BA53521DF77AE00005237 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				002BA51521DF743A00005237 /* Main.storyboard */,
+				002BA51A21DF743A00005237 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		002BA53721DF77C300005237 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				002BA51321DF743A00005237 /* ViewController.swift */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		002BA53821DF77E500005237 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				002BA53921DF77ED00005237 /* Plist */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		002BA53921DF77ED00005237 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				002BA51D21DF743A00005237 /* Info.plist */,
+			);
+			name = Plist;
 			sourceTree = "<group>";
 		};
 		7C27843DCCB6859A85ACF8B5 /* Pods */ = {
