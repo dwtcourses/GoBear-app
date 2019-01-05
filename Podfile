@@ -8,15 +8,17 @@
 inhibit_all_warnings!
 
 source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
 workspace 'GoBearWorkspace.xcworkspace'
 use_frameworks!
 
 # Default Pod for all of project
 def app_pods
     
-    pod 'Alamofire', '~> 4.0'
+    pod 'Alamofire',  '~> 4.0'
     pod 'RxSwift',    '~> 4.0'
     pod 'RxCocoa',    '~> 4.0'
+    pod 'SWXMLHash',  '~> 4.7.0'
     pod 'RxOptional'
 end
 
