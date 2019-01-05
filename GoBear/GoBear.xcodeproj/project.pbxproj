@@ -8,11 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		002BA51221DF743A00005237 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002BA51121DF743A00005237 /* AppDelegate.swift */; };
-		002BA51421DF743A00005237 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002BA51321DF743A00005237 /* ViewController.swift */; };
+		002BA51421DF743A00005237 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002BA51321DF743A00005237 /* RootViewController.swift */; };
 		002BA51721DF743A00005237 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 002BA51521DF743A00005237 /* Main.storyboard */; };
 		002BA51921DF743A00005237 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 002BA51821DF743A00005237 /* Assets.xcassets */; };
 		002BA51C21DF743A00005237 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 002BA51A21DF743A00005237 /* LaunchScreen.storyboard */; };
 		002BA52721DF743B00005237 /* GoBearUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002BA52621DF743B00005237 /* GoBearUITests.swift */; };
+		00E896D021E0E8DE00409F69 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E896CF21E0E8DE00409F69 /* WalkthroughViewController.swift */; };
+		00E896D321E0E8FF00409F69 /* GoBearCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E896D121E0E8F700409F69 /* GoBearCore.framework */; };
+		00E896D421E0E8FF00409F69 /* GoBearCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 00E896D121E0E8F700409F69 /* GoBearCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		00E896DE21E0EF5B00409F69 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E896DD21E0EF5B00409F69 /* Constant.swift */; };
+		00E896E121E0F50000409F69 /* WalkthroughPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E896DF21E0F50000409F69 /* WalkthroughPageCell.swift */; };
+		00E896E221E0F50000409F69 /* WalkthroughPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00E896E021E0F50000409F69 /* WalkthroughPageCell.xib */; };
 		F4D4377197F5607F3EC98573 /* Pods_GoBear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5773DEC8D34945C656697BDE /* Pods_GoBear.framework */; };
 		FA1A280D7893507E4BA09B81 /* Pods_GoBearUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F50F3F85E76AAE0D00B4BAF /* Pods_GoBearUITests.framework */; };
 /* End PBXBuildFile section */
@@ -27,10 +33,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		00E896D521E0E8FF00409F69 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				00E896D421E0E8FF00409F69 /* GoBearCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		002BA50E21DF743A00005237 /* GoBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		002BA51121DF743A00005237 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		002BA51321DF743A00005237 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		002BA51321DF743A00005237 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		002BA51621DF743A00005237 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		002BA51821DF743A00005237 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		002BA51B21DF743A00005237 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +58,11 @@
 		002BA52221DF743B00005237 /* GoBearUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoBearUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		002BA52621DF743B00005237 /* GoBearUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBearUITests.swift; sourceTree = "<group>"; };
 		002BA52821DF743B00005237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00E896CF21E0E8DE00409F69 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
+		00E896D121E0E8F700409F69 /* GoBearCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoBearCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E896DD21E0EF5B00409F69 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		00E896DF21E0F50000409F69 /* WalkthroughPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageCell.swift; sourceTree = "<group>"; };
+		00E896E021E0F50000409F69 /* WalkthroughPageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalkthroughPageCell.xib; sourceTree = "<group>"; };
 		0F50F3F85E76AAE0D00B4BAF /* Pods_GoBearUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoBearUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		482D219DD1049BD87416EC55 /* Pods-GoBearUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoBearUITests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-GoBearUITests/Pods-GoBearUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5773DEC8D34945C656697BDE /* Pods_GoBear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoBear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +77,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4D4377197F5607F3EC98573 /* Pods_GoBear.framework in Frameworks */,
+				00E896D321E0E8FF00409F69 /* GoBearCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,8 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				002BA53821DF77E500005237 /* Constants */,
-				002BA53721DF77C300005237 /* Sources */,
 				002BA53321DF779600005237 /* Resources */,
+				002BA53721DF77C300005237 /* Sources */,
 				002BA51121DF743A00005237 /* AppDelegate.swift */,
 			);
 			path = GoBear;
@@ -135,7 +161,8 @@
 		002BA53721DF77C300005237 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				002BA51321DF743A00005237 /* ViewController.swift */,
+				00E896CB21E0CF8900409F69 /* Controller */,
+				00E896CA21E0CF8500409F69 /* View */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -144,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				002BA53921DF77ED00005237 /* Plist */,
+				00E896DD21E0EF5B00409F69 /* Constant.swift */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -154,6 +182,48 @@
 				002BA51D21DF743A00005237 /* Info.plist */,
 			);
 			name = Plist;
+			sourceTree = "<group>";
+		};
+		00E896CA21E0CF8500409F69 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				00E896CD21E0CFA500409F69 /* GoBear */,
+				00E896CC21E0CF9F00409F69 /* Common */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		00E896CB21E0CF8900409F69 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				002BA51321DF743A00005237 /* RootViewController.swift */,
+				00E896CF21E0E8DE00409F69 /* WalkthroughViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		00E896CC21E0CF9F00409F69 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		00E896CD21E0CFA500409F69 /* GoBear */ = {
+			isa = PBXGroup;
+			children = (
+				00E896CE21E0CFC200409F69 /* WalkthroughCollectionView */,
+			);
+			name = GoBear;
+			sourceTree = "<group>";
+		};
+		00E896CE21E0CFC200409F69 /* WalkthroughCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				00E896DF21E0F50000409F69 /* WalkthroughPageCell.swift */,
+				00E896E021E0F50000409F69 /* WalkthroughPageCell.xib */,
+			);
+			name = WalkthroughCollectionView;
 			sourceTree = "<group>";
 		};
 		7C27843DCCB6859A85ACF8B5 /* Pods */ = {
@@ -170,6 +240,7 @@
 		D5B3BB010AD75CF3A6DE8C5C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				00E896D121E0E8F700409F69 /* GoBearCore.framework */,
 				5773DEC8D34945C656697BDE /* Pods_GoBear.framework */,
 				0F50F3F85E76AAE0D00B4BAF /* Pods_GoBearUITests.framework */,
 			);
@@ -188,6 +259,7 @@
 				002BA50B21DF743A00005237 /* Frameworks */,
 				002BA50C21DF743A00005237 /* Resources */,
 				F77FCF5026819EBF57C5F659 /* [CP] Embed Pods Frameworks */,
+				00E896D521E0E8FF00409F69 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -261,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				002BA51C21DF743A00005237 /* LaunchScreen.storyboard in Resources */,
+				00E896E221E0F50000409F69 /* WalkthroughPageCell.xib in Resources */,
 				002BA51921DF743A00005237 /* Assets.xcassets in Resources */,
 				002BA51721DF743A00005237 /* Main.storyboard in Resources */,
 			);
@@ -310,7 +383,6 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
 			);
@@ -321,7 +393,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
 			);
@@ -359,8 +430,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				002BA51421DF743A00005237 /* ViewController.swift in Sources */,
+				00E896D021E0E8DE00409F69 /* WalkthroughViewController.swift in Sources */,
+				002BA51421DF743A00005237 /* RootViewController.swift in Sources */,
 				002BA51221DF743A00005237 /* AppDelegate.swift in Sources */,
+				00E896DE21E0EF5B00409F69 /* Constant.swift in Sources */,
+				00E896E121E0F50000409F69 /* WalkthroughPageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

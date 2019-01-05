@@ -9,10 +9,20 @@
 import UIKit
 
 class WalkthroughPageCell: UICollectionViewCell {
+    
+    // MARK: - IBOutlet
+    @IBOutlet weak var lblContent: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+    
+    /// Configure
+    ///
+    /// - Parameter value: text value
+    func configure(_ value: String) {
+        lblContent.text = value
+    }
 }
