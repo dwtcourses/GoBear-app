@@ -6,4 +6,11 @@
 //  Copyright © 2019 GoBear. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+public extension UICollectionView {
+    
+    func registerCell<T: Identifier>(_ viewType: T.Type) {
+        self.register(viewType.xib(), forCellWithReuseIdentifier: viewType.identifier)
+    }
+}

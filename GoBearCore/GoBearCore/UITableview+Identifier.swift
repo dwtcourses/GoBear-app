@@ -6,4 +6,12 @@
 //  Copyright © 2019 GoBear. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+// MARK: - UITableView
+public extension UITableView {
+    
+    func registerCell<T: Identifier>(_ viewType: T.Type) {
+        self.register(viewType.xib(), forCellReuseIdentifier: viewType.identifier)
+    }
+}

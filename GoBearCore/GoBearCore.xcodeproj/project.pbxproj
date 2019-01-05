@@ -29,6 +29,11 @@
 		00E896C521E076B400409F69 /* GoBearProductsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E896C421E076B400409F69 /* GoBearProductsRequest.swift */; };
 		00E896C721E0775800409F69 /* ProductObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E896C621E0775800409F69 /* ProductObj.swift */; };
 		00E896C921E0832800409F69 /* GoBearProductDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E896C821E0832800409F69 /* GoBearProductDetailRequest.swift */; };
+		00E896D721E0EAF100409F69 /* UIViewController+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E896D621E0EAF100409F69 /* UIViewController+Identifier.swift */; };
+		00E896D921E0EBDA00409F69 /* ViewModelCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E896D821E0EBDA00409F69 /* ViewModelCoordinator.swift */; };
+		00E896DC21E0ED3200409F69 /* GoBearService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E896DB21E0ED3200409F69 /* GoBearService.swift */; };
+		00E896E421E0F5FA00409F69 /* UITableview+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E896E321E0F5FA00409F69 /* UITableview+Identifier.swift */; };
+		00E896E621E0F64600409F69 /* UICollectionView+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E896E521E0F64600409F69 /* UICollectionView+Identifier.swift */; };
 		B95452F0B8163218454A5939 /* Pods_GoBearCoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41ED2A234173DE8661892449 /* Pods_GoBearCoreTests.framework */; };
 		D8BAFA7FB3234D47938DAF52 /* Pods_GoBearCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F9A8E3B548394BC4086808 /* Pods_GoBearCore.framework */; };
 /* End PBXBuildFile section */
@@ -69,6 +74,11 @@
 		00E896C421E076B400409F69 /* GoBearProductsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBearProductsRequest.swift; sourceTree = "<group>"; };
 		00E896C621E0775800409F69 /* ProductObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductObj.swift; sourceTree = "<group>"; };
 		00E896C821E0832800409F69 /* GoBearProductDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBearProductDetailRequest.swift; sourceTree = "<group>"; };
+		00E896D621E0EAF100409F69 /* UIViewController+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Identifier.swift"; sourceTree = "<group>"; };
+		00E896D821E0EBDA00409F69 /* ViewModelCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelCoordinator.swift; sourceTree = "<group>"; };
+		00E896DB21E0ED3200409F69 /* GoBearService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBearService.swift; sourceTree = "<group>"; };
+		00E896E321E0F5FA00409F69 /* UITableview+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableview+Identifier.swift"; sourceTree = "<group>"; };
+		00E896E521E0F64600409F69 /* UICollectionView+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Identifier.swift"; sourceTree = "<group>"; };
 		1531E9887FDF1CFD73AA5A6D /* Pods-GoBearCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoBearCore.release.xcconfig"; path = "../Pods/Target Support Files/Pods-GoBearCore/Pods-GoBearCore.release.xcconfig"; sourceTree = "<group>"; };
 		1597EA3E127B335F305A8A9D /* Pods-GoBearCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoBearCore.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-GoBearCore/Pods-GoBearCore.debug.xcconfig"; sourceTree = "<group>"; };
 		41ED2A234173DE8661892449 /* Pods_GoBearCoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoBearCoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +158,7 @@
 		002BA53B21DFABAA00005237 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				00E896DA21E0ED2500409F69 /* Services */,
 				002BA56021E05D3B00005237 /* Helpers */,
 				002BA55821E05B4F00005237 /* Network */,
 				002BA54021DFAED100005237 /* State */,
@@ -192,6 +203,7 @@
 			children = (
 				002BA54921DFB1FD00005237 /* AppViewModel.swift */,
 				002BA54721DFB12F00005237 /* BaseViewModel.swift */,
+				00E896D821E0EBDA00409F69 /* ViewModelCoordinator.swift */,
 			);
 			name = "View Models";
 			sourceTree = "<group>";
@@ -210,6 +222,9 @@
 			children = (
 				002BA55421E0586C00005237 /* Identifier.swift */,
 				002BA55621E058BB00005237 /* UIView+Identifier.swift */,
+				00E896D621E0EAF100409F69 /* UIViewController+Identifier.swift */,
+				00E896E321E0F5FA00409F69 /* UITableview+Identifier.swift */,
+				00E896E521E0F64600409F69 /* UICollectionView+Identifier.swift */,
 			);
 			name = Identifier;
 			sourceTree = "<group>";
@@ -241,6 +256,14 @@
 				002BA56121E05D5700005237 /* NSError+Helper.swift */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		00E896DA21E0ED2500409F69 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				00E896DB21E0ED3200409F69 /* GoBearService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		5A401FAC2C40D2B26961375B /* Frameworks */ = {
@@ -427,7 +450,6 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
 			);
@@ -438,7 +460,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
 			);
@@ -459,7 +480,9 @@
 				002BA54E21DFBBCF00005237 /* UserObj.swift in Sources */,
 				002BA54221DFAEE000005237 /* ApplicationState.swift in Sources */,
 				002BA56421E0681E00005237 /* Request+Alamofire.swift in Sources */,
+				00E896D721E0EAF100409F69 /* UIViewController+Identifier.swift in Sources */,
 				002BA55221DFC52500005237 /* GoBearFieldAuth.swift in Sources */,
+				00E896D921E0EBDA00409F69 /* ViewModelCoordinator.swift in Sources */,
 				002BA55F21E05C9400005237 /* Request+Error.swift in Sources */,
 				002BA55021DFBD7000005237 /* Constant.swift in Sources */,
 				002BA54821DFB12F00005237 /* BaseViewModel.swift in Sources */,
@@ -467,10 +490,13 @@
 				002BA56221E05D5700005237 /* NSError+Helper.swift in Sources */,
 				00E896C721E0775800409F69 /* ProductObj.swift in Sources */,
 				002BA55521E0586C00005237 /* Identifier.swift in Sources */,
+				00E896DC21E0ED3200409F69 /* GoBearService.swift in Sources */,
 				002BA54C21DFBACA00005237 /* GoBearAuth.swift in Sources */,
 				002BA54421DFAEEE00005237 /* AuthenticationState.swift in Sources */,
 				002BA55721E058BB00005237 /* UIView+Identifier.swift in Sources */,
 				002BA53E21DFABEC00005237 /* BaseViewController.swift in Sources */,
+				00E896E421E0F5FA00409F69 /* UITableview+Identifier.swift in Sources */,
+				00E896E621E0F64600409F69 /* UICollectionView+Identifier.swift in Sources */,
 				00E896C921E0832800409F69 /* GoBearProductDetailRequest.swift in Sources */,
 				002BA56621E06AA600005237 /* Request+Default.swift in Sources */,
 			);

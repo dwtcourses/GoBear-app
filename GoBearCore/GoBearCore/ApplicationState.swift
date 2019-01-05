@@ -12,8 +12,8 @@ import Foundation
 public enum ApplicationState {
     
     // First come
-    case firstTimeCome
+    case firstTime
     
     // Otherwise case
-    case loginScreen
+    case authenticate
 }

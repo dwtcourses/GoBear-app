@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: - Identifier protocol
 public protocol Identifier {
     
     static var identifier: String { get }

@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: - Identifier
 extension UIView: Identifier {
     
     public static var identifier: String {
