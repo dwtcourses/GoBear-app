@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import RxSwift
+import SWXMLHash
 
 // MARK: - Default implementation
 extension Request {
@@ -67,5 +68,9 @@ extension Request {
                 })
             return Disposables.create()
         }
+    }
+    
+    func parserXML(_ data: Data) -> XMLIndexer {
+        return SWXMLHash.lazy(data)
     }
 }

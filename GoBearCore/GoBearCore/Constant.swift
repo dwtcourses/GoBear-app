@@ -34,6 +34,17 @@ struct Constant {
             static let Username = "username"
             static let IsRemember = "isRemember"
         }
+        
+        // MARK: - Product
+        struct Product {
+            
+            static let Item = "item"
+            
+            static let Title = "title"
+            static let PublicDate = "pubDate"
+            static let Thumbnail = "thumbnail"
+            static let Description = "description"
+        }
     }
     
     // MARK: - ErrorMessage
