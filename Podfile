@@ -16,8 +16,8 @@ def app_pods
     
     pod 'Alamofire', '~> 4.0'
     pod 'RxSwift',    '~> 4.0'
-    pod 'RxOptional'
     pod 'RxCocoa',    '~> 4.0'
+    pod 'RxOptional'
 end
 
 target 'GoBearCore' do
