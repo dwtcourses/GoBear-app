@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RootViewController.swift
 //  GoBear
 //
 //  Created by Huy Nguyen on 1/4/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class RootViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
