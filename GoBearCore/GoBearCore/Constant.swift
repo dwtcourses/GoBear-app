@@ -19,7 +19,9 @@ struct Constant {
     // MARK: - GoBearApi
     struct GoBearApi {
         
-        static let BaseSanboxURL = ""
+        static let BaseSanboxURL = "http://feeds.bbci.co.uk/"
+        
+        static let Feeds = "news/world/asia/rss.xml"
     }
     
     // MARK: - Object
@@ -42,11 +44,14 @@ struct Constant {
         // MARK: - Product
         struct Product {
             
+            static let RSS = "rss"
+            static let Channel = "channel"
             static let Item = "item"
             
             static let Title = "title"
             static let PublicDate = "pubDate"
-            static let Thumbnail = "thumbnail"
+            static let Thumbnail = "media:thumbnail"
+            static let Url = "url"
             static let Description = "description"
         }
     }

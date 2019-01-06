@@ -7,5 +7,11 @@
 //
 
 import Foundation
+import RxSwift
 
-public final class GoBearService { }
+public final class GoBearService {
+    
+    public func availableProductsObserver() -> Observable<[ProductObj]> {
+        return GoBearProductsRequest().toObservable()
+    }
+}

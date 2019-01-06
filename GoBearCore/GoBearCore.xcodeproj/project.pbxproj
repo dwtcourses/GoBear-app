@@ -27,6 +27,7 @@
 		002BA56621E06AA600005237 /* Request+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002BA56521E06AA600005237 /* Request+Default.swift */; };
 		0096E18421E1AA5B009D517E /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096E18321E1AA5B009D517E /* AuthenticationViewModel.swift */; };
 		0096E18721E1D612009D517E /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096E18621E1D612009D517E /* UIViewController.swift */; };
+		0096E19D21E25C61009D517E /* GoBearServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096E19C21E25C61009D517E /* GoBearServiceViewModel.swift */; };
 		00E896C521E076B400409F69 /* GoBearProductsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E896C421E076B400409F69 /* GoBearProductsRequest.swift */; };
 		00E896C721E0775800409F69 /* ProductObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E896C621E0775800409F69 /* ProductObj.swift */; };
 		00E896C921E0832800409F69 /* GoBearProductDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E896C821E0832800409F69 /* GoBearProductDetailRequest.swift */; };
@@ -73,6 +74,7 @@
 		002BA56521E06AA600005237 /* Request+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Request+Default.swift"; sourceTree = "<group>"; };
 		0096E18321E1AA5B009D517E /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		0096E18621E1D612009D517E /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		0096E19C21E25C61009D517E /* GoBearServiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBearServiceViewModel.swift; sourceTree = "<group>"; };
 		00E896C421E076B400409F69 /* GoBearProductsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBearProductsRequest.swift; sourceTree = "<group>"; };
 		00E896C621E0775800409F69 /* ProductObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductObj.swift; sourceTree = "<group>"; };
 		00E896C821E0832800409F69 /* GoBearProductDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBearProductDetailRequest.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				002BA54721DFB12F00005237 /* BaseViewModel.swift */,
 				00E896D821E0EBDA00409F69 /* ViewModelCoordinator.swift */,
 				0096E18321E1AA5B009D517E /* AuthenticationViewModel.swift */,
+				0096E19C21E25C61009D517E /* GoBearServiceViewModel.swift */,
 			);
 			name = "View Models";
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -472,6 +476,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +499,7 @@
 				002BA55221DFC52500005237 /* GoBearFieldAuth.swift in Sources */,
 				00E896D921E0EBDA00409F69 /* ViewModelCoordinator.swift in Sources */,
 				002BA55F21E05C9400005237 /* Request+Error.swift in Sources */,
+				0096E19D21E25C61009D517E /* GoBearServiceViewModel.swift in Sources */,
 				002BA55021DFBD7000005237 /* Constant.swift in Sources */,
 				002BA54821DFB12F00005237 /* BaseViewModel.swift in Sources */,
 				0096E18421E1AA5B009D517E /* AuthenticationViewModel.swift in Sources */,

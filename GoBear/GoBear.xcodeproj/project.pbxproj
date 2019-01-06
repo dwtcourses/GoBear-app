@@ -24,6 +24,7 @@
 		0096E18E21E1EF13009D517E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096E18D21E1EF13009D517E /* FeedViewController.swift */; };
 		0096E19821E250D7009D517E /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096E19621E250D7009D517E /* FeedCell.swift */; };
 		0096E19921E250D7009D517E /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0096E19721E250D7009D517E /* FeedCell.xib */; };
+		0096E19B21E25ABC009D517E /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0096E19A21E25ABC009D517E /* Feed.storyboard */; };
 		00E896D021E0E8DE00409F69 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E896CF21E0E8DE00409F69 /* WalkthroughViewController.swift */; };
 		00E896D321E0E8FF00409F69 /* GoBearCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E896D121E0E8F700409F69 /* GoBearCore.framework */; };
 		00E896D421E0E8FF00409F69 /* GoBearCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 00E896D121E0E8F700409F69 /* GoBearCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -80,6 +81,7 @@
 		0096E18D21E1EF13009D517E /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		0096E19621E250D7009D517E /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		0096E19721E250D7009D517E /* FeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
+		0096E19A21E25ABC009D517E /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		00E896CF21E0E8DE00409F69 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
 		00E896D121E0E8F700409F69 /* GoBearCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoBearCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E896DD21E0EF5B00409F69 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				002BA51521DF743A00005237 /* Main.storyboard */,
 				002BA51A21DF743A00005237 /* LaunchScreen.storyboard */,
 				0096E17421E1A06A009D517E /* Authentication.storyboard */,
+				0096E19A21E25ABC009D517E /* Feed.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				002BA51C21DF743A00005237 /* LaunchScreen.storyboard in Resources */,
+				0096E19B21E25ABC009D517E /* Feed.storyboard in Resources */,
 				00E896E221E0F50000409F69 /* WalkthroughPageCell.xib in Resources */,
 				002BA51921DF743A00005237 /* Assets.xcassets in Resources */,
 				0096E19921E250D7009D517E /* FeedCell.xib in Resources */,
@@ -459,6 +463,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -469,6 +474,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

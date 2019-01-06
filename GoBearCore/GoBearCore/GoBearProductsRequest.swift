@@ -15,7 +15,7 @@ final class GoBearProductsRequest: Request {
     typealias Element = [ProductObj]
     
     // Endpoint
-    var endpoint: String { return Constant.GoBearApi.BaseSanboxURL }
+    var endpoint: String { return Constant.GoBearApi.Feeds }
     
     // HTTP Method
     var httpMethod: HTTPMethod { return .get }
@@ -27,7 +27,7 @@ final class GoBearProductsRequest: Request {
             return nil
         }
         
-        let products = self.parserXML(result)[Constant.Object.Product.Item].all
+        let products = self.parserXML(result)[Constant.Object.Product.RSS][Constant.Object.Product.Channel][Constant.Object.Product.Item].all
         
         return try products.map { try ProductObj($0) }
     }
