@@ -10,12 +10,18 @@ import UIKit
 
 class GoBearButton: UIButton {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        // Common
+        self.initCommon()
     }
-    */
-
+    
+    fileprivate func initCommon() {
+        
+        layer.masksToBounds = true
+        layer.cornerRadius = 8.0
+        layer.borderColor = UIColor.darkGray.cgColor
+        layer.borderWidth = 0.5
+    }
 }

@@ -9,13 +9,29 @@
 import UIKit
 
 class GoBearTextField: UITextField {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.initCommon()
     }
-    */
-
+    
+    fileprivate func initCommon() {
+        self.addLineToView(view: self, color: .darkGray, width: 0.5)
+    }
+    
+    func addLineToView(view : UIView, color: UIColor, width: Double) {
+        
+        let lineView = UIView()
+        lineView.backgroundColor = color
+        lineView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(lineView)
+        
+        let metrics = ["width" : NSNumber(value: width)]
+        let views = ["lineView" : lineView]
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[lineView]|",
+                                                           options:NSLayoutConstraint.FormatOptions(rawValue: 0), metrics:metrics, views:views))
+        
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[lineView(width)]|",
+                                                           options:NSLayoutConstraint.FormatOptions(rawValue: 0), metrics:metrics, views:views))
+    }
 }
