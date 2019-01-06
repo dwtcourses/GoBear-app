@@ -11,6 +11,7 @@ import GoBearCore
 
 class WalkthroughViewController: BaseViewController {
     
+    // MARK: - IBOutlet
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIStackView!
     

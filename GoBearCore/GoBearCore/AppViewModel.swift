@@ -21,10 +21,7 @@ public protocol AppViewModelInput {
     var switchWalkthroughScreenPublish: PublishSubject<Void> { get }
 }
 
-public protocol AppViewModelOutput {
-    
-    var applicationStateVariable: Variable<ApplicationState> { get }
-}
+public protocol AppViewModelOutput { }
 
 public final class AppViewModel: AppViewModelInput, AppViewModelOutput, AppViewModelProtocol {
     
@@ -34,7 +31,6 @@ public final class AppViewModel: AppViewModelInput, AppViewModelOutput, AppViewM
     
     // MARK: - Variable
     public var switchWalkthroughScreenPublish: PublishSubject<Void> = PublishSubject<Void>()
-    public var applicationStateVariable: Variable<ApplicationState> = Variable<ApplicationState>(.firstTime)
     
     fileprivate let goBearService: GoBearService
     fileprivate let disposeBag = DisposeBag()
@@ -44,10 +40,10 @@ public final class AppViewModel: AppViewModelInput, AppViewModelOutput, AppViewM
         
         self.goBearService = goBearService
         
-        switchWalkthroughScreenPublish
-            .withLatestFrom(applicationStateVariable.asObservable())
-            .map({ return $0 == .firstTime ? ApplicationState.firstTime : ApplicationState.authenticate })
-            .subscribe()
-            .disposed(by: disposeBag)
+//        switchWalkthroughScreenPublish
+//            .withLatestFrom(applicationStateVariable.asObservable())
+//            .map({ return $0 == .firstTime ? ApplicationState.firstTime : ApplicationState.authenticate })
+//            .subscribe()
+//            .disposed(by: disposeBag)
     }
 }

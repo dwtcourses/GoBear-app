@@ -14,7 +14,7 @@ public protocol GoBearFieldAuth {
     
     var title: String { get }
     
-    var textString: Variable<String> { get }
+    var textString: Variable<String?> { get }
     var errorValue: Variable<String?> { get }
 }
 
@@ -24,7 +24,7 @@ extension GoBearFieldAuth {
         return (size.min...size.max).contains(value.count)
     }
     
-    func validateString(_ value: String?, pattern: String) -> Bool {
+    func validateString(_ value: String, pattern: String) -> Bool {
         let matched = NSPredicate(format: "SELF MATCHES %@", pattern)
         return matched.evaluate(with: value)
     }
@@ -35,19 +35,25 @@ public struct GoBearUsernameField: GoBearFieldAuth {
     
     // MARK: - Variable
     public var title: String = "Username"
-    public var textString: Variable<String> = Variable<String>("")
+    public var textString: Variable<String?> = Variable<String?>(nil)
     public var errorValue: Variable<String?> = Variable<String?>(nil)
     
     // MARK: - Validate
     func validate() -> Bool {
         
-        guard validateSize(textString.value, size: (6, 15)) else {
+        guard let text = textString.value, !text.isEmpty else {
+            
+            errorValue.value = Constant.Error.Message.Login.Username.Empty
+            return false
+        }
+        
+        guard validateSize(text, size: (6, 100)) else {
             
             errorValue.value = Constant.Error.Message.Login.Username.Size
             return false
         }
         
-        guard validateString(textString.value, pattern: "^[a-z0-9_-]$") else {
+        guard validateString(text, pattern: "\\w{6,100}") else {
             
             errorValue.value = Constant.Error.Message.Login.Username.ContainSpecChar
             return false
@@ -63,25 +69,31 @@ public struct GoBearPasswordField: GoBearFieldAuth {
     
     // MARK: - Variable
     public var title: String = "Password"
-    public var textString: Variable<String> = Variable<String>("")
+    public var textString: Variable<String?> = Variable<String?>(nil)
     public var errorValue: Variable<String?> = Variable<String?>(nil)
     
     // MARK: - Validate
     func validate() -> Bool {
         
-        guard validateString(textString.value, pattern: "[a-zA-Z]") else {
+        guard let text = textString.value, !text.isEmpty else {
+            
+            errorValue.value = Constant.Error.Message.Login.Password.Empty
+            return false
+        }
+        
+        guard validateString(text, pattern: "(?=.*[a-z])(?=.*[A-Z]).{2,}") else {
             
             errorValue.value = Constant.Error.Message.Login.Password.UpperAndLowerCase
             return false
         }
         
-        guard validateString(textString.value, pattern: "[0-9]") else {
+        guard validateString(text, pattern: "(?=)(?!\\s).{1,}") else {
             
             errorValue.value = Constant.Error.Message.Login.Password.IncludeNumber
             return false
         }
         
-        guard textString.value.count >= 8 else {
+        guard text.count >= 8 else {
             
             errorValue.value = Constant.Error.Message.Login.Password.Size
             return false
