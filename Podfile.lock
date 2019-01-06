@@ -5,12 +5,16 @@ PODS:
     - RxSwift (~> 4.0)
   - RxSwift (4.4.0):
     - RxAtomic (~> 4.4)
+  - SDWebImage (4.4.3):
+    - SDWebImage/Core (= 4.4.3)
+  - SDWebImage/Core (4.4.3)
   - SWXMLHash (4.7.6)
 
 DEPENDENCIES:
   - Alamofire (= 4.5)
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
+  - SDWebImage (~> 4.0)
   - SWXMLHash (~> 4.7.0)
 
 SPEC REPOS:
@@ -19,6 +23,7 @@ SPEC REPOS:
     - RxAtomic
     - RxCocoa
     - RxSwift
+    - SDWebImage
     - SWXMLHash
 
 SPEC CHECKSUMS:
@@ -26,8 +31,9 @@ SPEC CHECKSUMS:
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
+  SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
   SWXMLHash: f6e0933ce74f2626669dc544851bc9fc1941670d
 
-PODFILE CHECKSUM: e858ddb9928cf5dab84bee41df5110ae56751023
+PODFILE CHECKSUM: f46866de23d4ea9fb2f6a7196151d1f6e70937ed
 
 COCOAPODS: 1.5.3
