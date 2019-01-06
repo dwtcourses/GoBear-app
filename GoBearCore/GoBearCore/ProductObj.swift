@@ -22,7 +22,7 @@ public final class ProductObj: XMLElementDeserializable {
         
         self.title       = try node[Constant.Object.Product.Title].value()
         self.pubDate     = try node[Constant.Object.Product.PublicDate].value()
-        self.thumbnail   = try node[Constant.Object.Product.Thumbnail].value()
+        self.thumbnail   = node[Constant.Object.Product.Thumbnail].element?.attribute(by: Constant.Object.Product.Url)?.text
         self.description = try node[Constant.Object.Product.Description].value()
     }
     
@@ -37,4 +37,7 @@ public final class ProductObj: XMLElementDeserializable {
         self.description = description
     }
     
+    func reformatDate() {
+        
+    }
 }

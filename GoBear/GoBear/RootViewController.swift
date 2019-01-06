@@ -52,7 +52,7 @@ class RootViewController: UINavigationController {
     //    MARK:- Init
     fileprivate func setupContentController(authenState: AuthenticationState) {
         
-        viewControllers = [LoginViewController.init(coordinator: coordinator!)]
+        viewControllers = [FeedViewController.init(coordinator: coordinator!)]
 //        switch authenState {
 //        case .authenticated:
 //            viewControllers = [LoginViewController.init(coordinator: coordinator!)]

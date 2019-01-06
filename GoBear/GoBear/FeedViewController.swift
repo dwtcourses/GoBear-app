@@ -7,24 +7,59 @@
 //
 
 import UIKit
+import GoBearCore
 
-class FeedViewController: UIViewController {
-
+class FeedViewController: BaseViewController {
+    
+    // MARK:- IBOutlet
+    @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: - Variable
+    fileprivate var viewModel: GoBearServiceViewModelProtocol!
+    fileprivate var products = [ProductObj]()
+    
+    // MARK:- View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.setupUI()
+        self.binding()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    class func `init`(coordinator: ViewModelCoordinatorProtocol) -> FeedViewController {
+        let viewController = FeedViewController.fromStoryboard(Constant.Storyboard.Feed) as! FeedViewController
+        viewController.viewModel = coordinator.goBearServiceViewModel
+        return viewController
     }
-    */
+    
+    fileprivate func setupUI() {
+        
+        self.tableView.registerCell(FeedCell.self)
+    }
+    
+    fileprivate func binding() {
+        
+        viewModel.input.startFetchProductPublisher.onNext(true)
+        
+        viewModel.output.listProductVariable
+            .asObservable()
+            .subscribe(onNext: { (products) in
+                self.products = products
+                self.tableView.reloadData()
+            }).disposed(by: disposeBag)
+    }
+}
 
+extension FeedViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return products.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: FeedCell.identifier, for: indexPath) as! FeedCell
+        cell.configure(products[indexPath.row])
+        return cell
+    }
 }

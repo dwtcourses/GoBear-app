@@ -19,6 +19,7 @@ def app_pods
     pod 'RxSwift',    '~> 4.0'
     pod 'RxCocoa',    '~> 4.0'
     pod 'SWXMLHash',  '~> 4.7.0'
+    pod 'SDWebImage', '~> 4.0'
 end
 
 target 'GoBearCore' do

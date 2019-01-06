@@ -12,6 +12,7 @@ public protocol ViewModelCoordinatorProtocol {
     
     var appViewModel: AppViewModelProtocol { get }
     var authenticationViewModel: AuthenticationViewModelProtocol { get }
+    var goBearServiceViewModel: GoBearServiceViewModelProtocol { get }
 }
 
 public final class ViewModelCoordinator: ViewModelCoordinatorProtocol {
@@ -19,11 +20,16 @@ public final class ViewModelCoordinator: ViewModelCoordinatorProtocol {
     // MARK: - View models
     public let appViewModel: AppViewModelProtocol
     public var authenticationViewModel: AuthenticationViewModelProtocol
+    public var goBearServiceViewModel: GoBearServiceViewModelProtocol
     
     // MARK: - Init
-    init(appViewModel: AppViewModelProtocol, authenticationViewModel: AuthenticationViewModelProtocol) {
+    init(appViewModel: AppViewModelProtocol,
+         authenticationViewModel: AuthenticationViewModelProtocol,
+         goBearServiceViewModel: GoBearServiceViewModelProtocol) {
+        
         self.appViewModel = appViewModel
         self.authenticationViewModel = authenticationViewModel
+        self.goBearServiceViewModel = goBearServiceViewModel
     }
     
     public class func defaultGoBear() -> ViewModelCoordinator {
@@ -32,7 +38,10 @@ public final class ViewModelCoordinator: ViewModelCoordinatorProtocol {
         
         let appViewModel = AppViewModel(goBearService: goBearService)
         let authenticationViewModel = AuthenticationViewModel()
+        let goBearViewModel = GoBearServiceViewModel(goBearService: goBearService)
         
-        return ViewModelCoordinator(appViewModel: appViewModel, authenticationViewModel: authenticationViewModel)
+        return ViewModelCoordinator(appViewModel: appViewModel,
+                                    authenticationViewModel: authenticationViewModel,
+                                    goBearServiceViewModel: goBearViewModel)
     }
 }
