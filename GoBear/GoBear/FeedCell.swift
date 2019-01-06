@@ -7,8 +7,14 @@
 //
 
 import UIKit
+import GoBearCore
 
 class FeedCell: UITableViewCell {
+    
+    @IBOutlet weak var thumbnail: UIImageView!
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var lblDescription: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,4 +27,10 @@ class FeedCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func configure(_ product: ProductObj) {
+        
+        lblTitle.text = product.title
+        lblDate.text = product.pubDate
+        lblDescription.text = product.description
+    }
 }
