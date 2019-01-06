@@ -8,6 +8,7 @@
 
 import UIKit
 import GoBearCore
+import SDWebImage
 
 class FeedCell: UITableViewCell {
     
@@ -32,5 +33,10 @@ class FeedCell: UITableViewCell {
         lblTitle.text = product.title
         lblDate.text = product.pubDate
         lblDescription.text = product.description
+        
+        guard let imageURL = product.thumbnail else {
+            return
+        }
+        thumbnail.sd_setImage(with: URL(string: imageURL), completed: nil)
     }
 }
