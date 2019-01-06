@@ -32,7 +32,11 @@ struct Constant {
         struct User {
             
             static let Username = "username"
+            static let Password = "password"
             static let IsRemember = "isRemember"
+            
+            static let UsernameValue = "GoBear"
+            static let PasswordValue = "GoBearDemo"
         }
         
         // MARK: - Product
@@ -65,6 +69,7 @@ struct Constant {
                 // MARK: - Username
                 struct Username {
                     
+                    static let Empty = "Please insert username field"
                     static let Size = "Username too short"
                     static let ContainSpecChar = "Only use letters, numbers and '_'"
                 }
@@ -72,10 +77,13 @@ struct Constant {
                 // MARK: - Password
                 struct Password {
                     
+                    static let Empty = "Please insert password field"
                     static let Size = "8 or more characters"
-                    static let UpperAndLowerCase = "Upper & lowercase letters"
+                    static let UpperAndLowerCase = "At least a Upper & lowercase letters"
                     static let IncludeNumber = "At least one number"
                 }
+                
+                static let IncorrectUser = "Username or password not correct"
             }
         }
     }

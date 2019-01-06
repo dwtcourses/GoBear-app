@@ -11,7 +11,6 @@
 		002BA4FA21DF741A00005237 /* GoBearCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002BA4F921DF741A00005237 /* GoBearCoreTests.swift */; };
 		002BA4FC21DF741B00005237 /* GoBearCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 002BA4EE21DF741A00005237 /* GoBearCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		002BA53E21DFABEC00005237 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002BA53D21DFABEC00005237 /* BaseViewController.swift */; };
-		002BA54221DFAEE000005237 /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002BA54121DFAEE000005237 /* ApplicationState.swift */; };
 		002BA54421DFAEEE00005237 /* AuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002BA54321DFAEEE00005237 /* AuthenticationState.swift */; };
 		002BA54821DFB12F00005237 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002BA54721DFB12F00005237 /* BaseViewModel.swift */; };
 		002BA54A21DFB1FD00005237 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002BA54921DFB1FD00005237 /* AppViewModel.swift */; };
@@ -26,6 +25,8 @@
 		002BA56221E05D5700005237 /* NSError+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002BA56121E05D5700005237 /* NSError+Helper.swift */; };
 		002BA56421E0681E00005237 /* Request+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002BA56321E0681E00005237 /* Request+Alamofire.swift */; };
 		002BA56621E06AA600005237 /* Request+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002BA56521E06AA600005237 /* Request+Default.swift */; };
+		0096E18421E1AA5B009D517E /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096E18321E1AA5B009D517E /* AuthenticationViewModel.swift */; };
+		0096E18721E1D612009D517E /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096E18621E1D612009D517E /* UIViewController.swift */; };
 		00E896C521E076B400409F69 /* GoBearProductsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E896C421E076B400409F69 /* GoBearProductsRequest.swift */; };
 		00E896C721E0775800409F69 /* ProductObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E896C621E0775800409F69 /* ProductObj.swift */; };
 		00E896C921E0832800409F69 /* GoBearProductDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E896C821E0832800409F69 /* GoBearProductDetailRequest.swift */; };
@@ -56,7 +57,6 @@
 		002BA4F921DF741A00005237 /* GoBearCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBearCoreTests.swift; sourceTree = "<group>"; };
 		002BA4FB21DF741B00005237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		002BA53D21DFABEC00005237 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		002BA54121DFAEE000005237 /* ApplicationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
 		002BA54321DFAEEE00005237 /* AuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationState.swift; sourceTree = "<group>"; };
 		002BA54721DFB12F00005237 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		002BA54921DFB1FD00005237 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
@@ -71,6 +71,8 @@
 		002BA56121E05D5700005237 /* NSError+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+Helper.swift"; sourceTree = "<group>"; };
 		002BA56321E0681E00005237 /* Request+Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Request+Alamofire.swift"; sourceTree = "<group>"; };
 		002BA56521E06AA600005237 /* Request+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Request+Default.swift"; sourceTree = "<group>"; };
+		0096E18321E1AA5B009D517E /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		0096E18621E1D612009D517E /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		00E896C421E076B400409F69 /* GoBearProductsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBearProductsRequest.swift; sourceTree = "<group>"; };
 		00E896C621E0775800409F69 /* ProductObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductObj.swift; sourceTree = "<group>"; };
 		00E896C821E0832800409F69 /* GoBearProductDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBearProductDetailRequest.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 		002BA53B21DFABAA00005237 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				0096E18521E1D602009D517E /* Extensions */,
 				00E896DA21E0ED2500409F69 /* Services */,
 				002BA56021E05D3B00005237 /* Helpers */,
 				002BA55821E05B4F00005237 /* Network */,
@@ -192,7 +195,6 @@
 		002BA54021DFAED100005237 /* State */ = {
 			isa = PBXGroup;
 			children = (
-				002BA54121DFAEE000005237 /* ApplicationState.swift */,
 				002BA54321DFAEEE00005237 /* AuthenticationState.swift */,
 			);
 			name = State;
@@ -204,6 +206,7 @@
 				002BA54921DFB1FD00005237 /* AppViewModel.swift */,
 				002BA54721DFB12F00005237 /* BaseViewModel.swift */,
 				00E896D821E0EBDA00409F69 /* ViewModelCoordinator.swift */,
+				0096E18321E1AA5B009D517E /* AuthenticationViewModel.swift */,
 			);
 			name = "View Models";
 			sourceTree = "<group>";
@@ -256,6 +259,14 @@
 				002BA56121E05D5700005237 /* NSError+Helper.swift */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		0096E18521E1D602009D517E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0096E18621E1D612009D517E /* UIViewController.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		00E896DA21E0ED2500409F69 /* Services */ = {
@@ -478,7 +489,6 @@
 				002BA54A21DFB1FD00005237 /* AppViewModel.swift in Sources */,
 				002BA55D21E05B8600005237 /* Request.swift in Sources */,
 				002BA54E21DFBBCF00005237 /* UserObj.swift in Sources */,
-				002BA54221DFAEE000005237 /* ApplicationState.swift in Sources */,
 				002BA56421E0681E00005237 /* Request+Alamofire.swift in Sources */,
 				00E896D721E0EAF100409F69 /* UIViewController+Identifier.swift in Sources */,
 				002BA55221DFC52500005237 /* GoBearFieldAuth.swift in Sources */,
@@ -486,6 +496,7 @@
 				002BA55F21E05C9400005237 /* Request+Error.swift in Sources */,
 				002BA55021DFBD7000005237 /* Constant.swift in Sources */,
 				002BA54821DFB12F00005237 /* BaseViewModel.swift in Sources */,
+				0096E18421E1AA5B009D517E /* AuthenticationViewModel.swift in Sources */,
 				00E896C521E076B400409F69 /* GoBearProductsRequest.swift in Sources */,
 				002BA56221E05D5700005237 /* NSError+Helper.swift in Sources */,
 				00E896C721E0775800409F69 /* ProductObj.swift in Sources */,
@@ -494,6 +505,7 @@
 				002BA54C21DFBACA00005237 /* GoBearAuth.swift in Sources */,
 				002BA54421DFAEEE00005237 /* AuthenticationState.swift in Sources */,
 				002BA55721E058BB00005237 /* UIView+Identifier.swift in Sources */,
+				0096E18721E1D612009D517E /* UIViewController.swift in Sources */,
 				002BA53E21DFABEC00005237 /* BaseViewController.swift in Sources */,
 				00E896E421E0F5FA00409F69 /* UITableview+Identifier.swift in Sources */,
 				00E896E621E0F64600409F69 /* UICollectionView+Identifier.swift in Sources */,

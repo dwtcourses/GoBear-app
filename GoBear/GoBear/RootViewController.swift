@@ -14,7 +14,7 @@ class RootViewController: UINavigationController {
     
     //    MARK:- Variables
     fileprivate var viewModel: AppViewModelProtocol?
-    //    fileprivate var authenViewModel: AuthenticateViewModelProtocol?
+    fileprivate var authenViewModel: AuthenticationViewModelProtocol?
     fileprivate var coordinator: ViewModelCoordinatorProtocol!
     
     fileprivate lazy var disposeBag = DisposeBag()
@@ -35,32 +35,29 @@ class RootViewController: UINavigationController {
     class func `init`(coordinator: ViewModelCoordinatorProtocol) -> RootViewController {
         let viewController = RootViewController.fromStoryboard(Constant.Storyboard.Main) as! RootViewController
         viewController.coordinator = coordinator
-        //        authenViewModel = coordinator.authenViewModel
+        viewController.authenViewModel = coordinator.authenticationViewModel
         viewController.viewModel = coordinator.appViewModel
         return viewController
     }
     
     public func binding() {
         
-        viewModel?.output.applicationStateVariable
+        authenViewModel?.output.authenticationStateDriver
             .asObservable()
-            .subscribe(onNext: { (applicationState) in
-                self.setupContentController(appState: applicationState)
+            .subscribe(onNext: { (authenState) in
+                self.setupContentController(authenState: authenState)
             }).disposed(by: disposeBag)
     }
     
     //    MARK:- Init
-    fileprivate func setupContentController(appState: ApplicationState, authenState: AuthenticationState? = nil) {
-        switch appState {
-        case .firstTime:
-            viewControllers = [WalkthroughViewController.init(coordinator: coordinator!)]
-        case .authenticate:
-            switch authenState! {
-            case .authenticated:
-                viewControllers = [WalkthroughViewController.init(coordinator: coordinator!)]
-            case .unAuthenticated:
-                viewControllers = [WalkthroughViewController.init(coordinator: coordinator!)]
-            }
-        }
+    fileprivate func setupContentController(authenState: AuthenticationState) {
+        
+        viewControllers = [LoginViewController.init(coordinator: coordinator!)]
+//        switch authenState {
+//        case .authenticated:
+//            viewControllers = [LoginViewController.init(coordinator: coordinator!)]
+//        case .unAuthenticated:
+//            viewControllers = [WalkthroughViewController.init(coordinator: coordinator!)]
+//        }
     }
 }

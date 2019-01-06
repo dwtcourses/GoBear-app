@@ -12,7 +12,15 @@ import RxSwift
 public class GoBearAuth {
 
     // MARK: - Variable
+    public var usernameFieldViewModel = GoBearUsernameField()
+    public var passwordFieldViewModel = GoBearPasswordField()
     public var loginPublisher = PublishSubject<Void>()
+    public var isSuccess = Variable<Bool>(false)
+    public var errorVariable = Variable<String?>(nil)
+    public var usernameVariable = Variable<String?>(nil)
+    public var passwordVariable = Variable<String?>(nil)
+    public var isRememberVariable = Variable<Bool>(false)
+    
     fileprivate let disposeBag = DisposeBag()
     
     // MARK: - Share
@@ -25,7 +33,7 @@ public class GoBearAuth {
     // MARK : - Current User
     public fileprivate(set) var currentUserVariable = Variable<UserObj?>(nil)
     public var currentUser: UserObj? { return currentUserVariable.value }
-    public var authenticationState: Observable<AuthenticationState>
+    public var authenStateObj: Observable<AuthenticationState>
     
     // Lock
     fileprivate let lock = NSLock()
@@ -33,8 +41,8 @@ public class GoBearAuth {
     
     public init() {
         
-        authenticationState = currentUserVariable.asObservable()
-            .map { $0 == nil ? .unAuthenticated : .authenticated }
+        authenStateObj = currentUserVariable.asObservable()
+            .map { $0 == nil || $0?.isRemember == false ? .unAuthenticated : .authenticated }
             .distinctUntilChanged()
         
         // Load disk
@@ -45,10 +53,89 @@ public class GoBearAuth {
                 self.savePersistantUser(userObj)
             }).disposed(by: disposeBag)
         
+        _ = usernameVariable.asObservable()
+            .subscribe { (emailValue) in
+                guard let value = emailValue.element else { return }
+                self.usernameFieldViewModel.textString = Variable(value)
+        }
         
+        _ = passwordVariable.asObservable()
+            .subscribe { (phoneValue) in
+                guard let value = phoneValue.element else { return }
+                self.passwordFieldViewModel.textString = Variable(value)
+        }
+        
+        loginPublisher.asObserver()
+            .flatMapLatest{ [unowned self] _ -> Observable<UserObj?> in
+                return self.requestOauthWithGoBear()
+            }.subscribe(onNext: { (userObj) in
+                guard let userObj = userObj else {
+                    self.updateErrorMessage()
+                    return
+                }
+                self.convertToCurrentUser(userObj)
+                
+            }).disposed(by: disposeBag)
     }
 }
 
+// MARK: - Private
+extension GoBearAuth {
+    
+    fileprivate func requestOauthWithGoBear() -> Observable<UserObj?> {
+        return Observable<UserObj?>.create {[unowned self] (observer) -> Disposable in
+            
+            guard self.usernameFieldViewModel.validate() && self.passwordFieldViewModel.validate() else {
+                observer.onNext(nil)
+                observer.onCompleted()
+                return Disposables.create()
+            }
+            
+            let username = self.usernameFieldViewModel.textString.value!
+            let password = self.passwordFieldViewModel.textString.value!
+            
+            guard username == Constant.Object.User.UsernameValue && password == Constant.Object.User.PasswordValue else {
+                observer.onNext(nil)
+                observer.onCompleted()
+                return Disposables.create()
+            }
+            
+            let userObj = UserObj(username: username,
+                                  password: password,
+                                  isRemember: self.isRememberVariable.value)
+            
+            observer.onNext(userObj)
+            observer.onCompleted()
+            
+            return Disposables.create()
+        }
+    }
+    
+    fileprivate func updateErrorMessage() {
+        
+        if let usernameErrMessage = self.usernameFieldViewModel.errorValue.value {
+            self.errorVariable.value = usernameErrMessage
+            return
+        }
+        
+        if let pwdErrorMessage = self.passwordFieldViewModel.errorValue.value {
+            self.errorVariable.value = pwdErrorMessage
+            return
+        }
+        
+        let username = self.usernameFieldViewModel.textString.value!
+        let password = self.passwordFieldViewModel.textString.value!
+        
+        guard username == Constant.Object.User.UsernameValue && password == Constant.Object.User.PasswordValue else {
+            self.errorVariable.value = Constant.Error.Message.Login.IncorrectUser
+            return
+        }
+        
+        self.isSuccess.value = true
+    }
+}
+
+// MARK: - Authentication
 extension GoBearAuth {
     
     fileprivate func loadPersistantUser() {
@@ -60,16 +147,23 @@ extension GoBearAuth {
         }
         
         guard let data = UserDefaults.standard.data(forKey: GoBearAuth.PersistantStoreKey) else {
+            self.savePersistantUser(UserObj.defaultUser())
             return
         }
         
         guard let userObj = try? NSKeyedUnarchiver.unarchivedObject(ofClass: UserObj.self, from: data) else {
             return
         }
-        currentUserVariable.value = userObj
+        
+        guard let _userObj = userObj, _userObj.isRemember else {
+            return
+        }
+        
+        currentUserVariable.value = _userObj
     }
     
     fileprivate func savePersistantUser(_ userObj: UserObj?) {
+        
         if let userObj = userObj {
             
             // Lock
@@ -78,9 +172,14 @@ extension GoBearAuth {
                 self.storeLock.unlock()
             }
             
+            guard userObj.isRemember else {
+                return
+            }
+            
             let data = try? NSKeyedArchiver.archivedData(withRootObject: userObj, requiringSecureCoding: true)
             persistantStore.set(data, forKey: GoBearAuth.PersistantStoreKey)
             persistantStore.synchronize()
+            
         } else {
             
             // Lock
@@ -93,5 +192,11 @@ extension GoBearAuth {
             persistantStore.removeObject(forKey: GoBearAuth.PersistantStoreKey)
             persistantStore.synchronize()
         }
+    }
+    
+    public func convertToCurrentUser(_ userObj: UserObj) {
+        
+        self.isSuccess.value = true
+        currentUserVariable.value = userObj
     }
 }

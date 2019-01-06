@@ -15,6 +15,7 @@ struct Constant {
     struct Storyboard {
         
         static let Main = UIStoryboard(name: "Main", bundle: .main)
+        static let Authentication = UIStoryboard(name: "Authentication", bundle: .main)
     }
     
     // MARK: - Walkthrough Text
