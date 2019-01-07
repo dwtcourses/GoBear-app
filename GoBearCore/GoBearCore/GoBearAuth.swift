@@ -195,6 +195,13 @@ extension GoBearAuth {
         currentUserVariable.value = userObj
     }
     
+    public func testConvertToCurrentUser(_ userObj: UserObj) {
+        
+        self.isSuccess.value = true
+        savePersistantUser(userObj)
+        currentUserVariable.value = userObj
+    }
+    
     public func logout() {
         
         // Lock

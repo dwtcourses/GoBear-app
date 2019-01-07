@@ -29,7 +29,8 @@
 		0096E18721E1D612009D517E /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096E18621E1D612009D517E /* UIViewController.swift */; };
 		0096E19D21E25C61009D517E /* GoBearServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096E19C21E25C61009D517E /* GoBearServiceViewModel.swift */; };
 		0096E1A221E323D1009D517E /* GoBearServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096E1A121E323D1009D517E /* GoBearServiceTest.swift */; };
-		0096E1A521E32742009D517E /* GoBearOauthTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096E1A421E32742009D517E /* GoBearOauthTest.swift */; };
+		0096E1A721E32DB9009D517E /* FakeGoBearCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096E1A621E32DB9009D517E /* FakeGoBearCredential.swift */; };
+		0096E1AA21E33032009D517E /* UserObjTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096E1A921E33032009D517E /* UserObjTests.swift */; };
 		00E896C521E076B400409F69 /* GoBearProductsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E896C421E076B400409F69 /* GoBearProductsRequest.swift */; };
 		00E896C721E0775800409F69 /* ProductObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E896C621E0775800409F69 /* ProductObj.swift */; };
 		00E896C921E0832800409F69 /* GoBearProductDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E896C821E0832800409F69 /* GoBearProductDetailRequest.swift */; };
@@ -78,7 +79,8 @@
 		0096E18621E1D612009D517E /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		0096E19C21E25C61009D517E /* GoBearServiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBearServiceViewModel.swift; sourceTree = "<group>"; };
 		0096E1A121E323D1009D517E /* GoBearServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBearServiceTest.swift; sourceTree = "<group>"; };
-		0096E1A421E32742009D517E /* GoBearOauthTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBearOauthTest.swift; sourceTree = "<group>"; };
+		0096E1A621E32DB9009D517E /* FakeGoBearCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeGoBearCredential.swift; sourceTree = "<group>"; };
+		0096E1A921E33032009D517E /* UserObjTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObjTests.swift; sourceTree = "<group>"; };
 		00E896C421E076B400409F69 /* GoBearProductsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBearProductsRequest.swift; sourceTree = "<group>"; };
 		00E896C621E0775800409F69 /* ProductObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductObj.swift; sourceTree = "<group>"; };
 		00E896C821E0832800409F69 /* GoBearProductDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBearProductDetailRequest.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 		002BA4F821DF741A00005237 /* GoBearCoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				0096E1A821E32E73009D517E /* Models */,
 				0096E1A321E32415009D517E /* Helper */,
 				0096E1A021E323BB009D517E /* Service */,
 				002BA4F921DF741A00005237 /* GoBearCoreTests.swift */,
@@ -289,9 +292,17 @@
 		0096E1A321E32415009D517E /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				0096E1A421E32742009D517E /* GoBearOauthTest.swift */,
+				0096E1A621E32DB9009D517E /* FakeGoBearCredential.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		0096E1A821E32E73009D517E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0096E1A921E33032009D517E /* UserObjTests.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		00E896DA21E0ED2500409F69 /* Services */ = {
@@ -550,7 +561,8 @@
 			files = (
 				002BA4FA21DF741A00005237 /* GoBearCoreTests.swift in Sources */,
 				0096E1A221E323D1009D517E /* GoBearServiceTest.swift in Sources */,
-				0096E1A521E32742009D517E /* GoBearOauthTest.swift in Sources */,
+				0096E1AA21E33032009D517E /* UserObjTests.swift in Sources */,
+				0096E1A721E32DB9009D517E /* FakeGoBearCredential.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
