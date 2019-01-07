@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="WalkthroughPageCell" customModule="GoBear" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="667"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="374" height="667"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nTl-YK-28B">
+                        <rect key="frame" x="0.0" y="0.0" width="374" height="667"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRq-93-gAF">
+                                <rect key="frame" x="16" y="32" width="342" height="603"/>
+                                <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nunc metus, blandit nec porttitor vestibulum, semper eu enim. Praesent quis libero nisi. Proin convallis nibh sed metus scelerisque at euismod erat dignissim. Donec adipiscing magna libero, vestibulum eleifend ipsum. Quisque varius mauris id turpis porttitor convallis. Donec elementum dui a velit congue adipiscing. Etiam sed justo sed lacus condimentum euismod vitae non nisi. Praesent ut ante non leo porttitor placerat eget eu erat. 
+
+Vestibulum interdum nibh non ante faucibus faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in turpis ipsum. Nullam porta velit nec tellus iaculis ac ultrices quam volutpat. Aenean lobortis imperdiet urna dapibus molestie. Maecenas in urna urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque vel eros risus, a porttitor nisi. Proin blandit elementum metus eu tempus. Nulla dapibus enim at purus varius eu tincidunt diam feugiat. </mutableString>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="fRq-93-gAF" secondAttribute="bottom" constant="32" id="0xx-Hq-bYH"/>
+                            <constraint firstItem="fRq-93-gAF" firstAttribute="centerX" secondItem="nTl-YK-28B" secondAttribute="centerX" id="0z7-p8-WXj"/>
+                            <constraint firstItem="fRq-93-gAF" firstAttribute="leading" secondItem="nTl-YK-28B" secondAttribute="leading" constant="16" id="21k-9m-Brr"/>
+                            <constraint firstAttribute="trailing" secondItem="fRq-93-gAF" secondAttribute="trailing" constant="16" id="iaQ-2h-y5X"/>
+                            <constraint firstItem="fRq-93-gAF" firstAttribute="top" secondItem="nTl-YK-28B" secondAttribute="top" constant="32" id="z6A-3E-QMd"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="nTl-YK-28B" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ENJ-1w-bzN"/>
+                <constraint firstAttribute="bottom" secondItem="nTl-YK-28B" secondAttribute="bottom" id="HA4-7Y-B3P"/>
+                <constraint firstItem="nTl-YK-28B" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="WKY-OG-Pak"/>
+                <constraint firstAttribute="trailing" secondItem="nTl-YK-28B" secondAttribute="trailing" id="eKs-is-tXm"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="lblContent" destination="fRq-93-gAF" id="YF3-qW-gvf"/>
+            </connections>
+            <point key="canvasLocation" x="137.59999999999999" y="153.82308845577214"/>
+        </collectionViewCell>
+    </objects>
+</document>

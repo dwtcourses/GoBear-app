@@ -8,11 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		002BA51221DF743A00005237 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002BA51121DF743A00005237 /* AppDelegate.swift */; };
-		002BA51421DF743A00005237 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002BA51321DF743A00005237 /* ViewController.swift */; };
+		002BA51421DF743A00005237 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002BA51321DF743A00005237 /* RootViewController.swift */; };
 		002BA51721DF743A00005237 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 002BA51521DF743A00005237 /* Main.storyboard */; };
 		002BA51921DF743A00005237 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 002BA51821DF743A00005237 /* Assets.xcassets */; };
 		002BA51C21DF743A00005237 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 002BA51A21DF743A00005237 /* LaunchScreen.storyboard */; };
 		002BA52721DF743B00005237 /* GoBearUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002BA52621DF743B00005237 /* GoBearUITests.swift */; };
+		0096E17521E1A06A009D517E /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0096E17421E1A06A009D517E /* Authentication.storyboard */; };
+		0096E17821E1A19A009D517E /* GoBearTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096E17721E1A19A009D517E /* GoBearTextField.swift */; };
+		0096E17A21E1A3B0009D517E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096E17921E1A3B0009D517E /* LoginViewController.swift */; };
+		0096E17C21E1A543009D517E /* KeyboardObserveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096E17B21E1A543009D517E /* KeyboardObserveViewController.swift */; };
+		0096E17F21E1A59B009D517E /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096E17E21E1A59B009D517E /* KeyboardManager.swift */; };
+		0096E18221E1A8E5009D517E /* GoBearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096E18121E1A8E5009D517E /* GoBearButton.swift */; };
+		0096E18921E1D63D009D517E /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096E18821E1D63D009D517E /* AlertManager.swift */; };
+		0096E18C21E1D6CC009D517E /* GoBearAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096E18B21E1D6CC009D517E /* GoBearAlertController.swift */; };
+		0096E18E21E1EF13009D517E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096E18D21E1EF13009D517E /* FeedViewController.swift */; };
+		0096E19821E250D7009D517E /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096E19621E250D7009D517E /* FeedCell.swift */; };
+		0096E19921E250D7009D517E /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0096E19721E250D7009D517E /* FeedCell.xib */; };
+		0096E19B21E25ABC009D517E /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0096E19A21E25ABC009D517E /* Feed.storyboard */; };
+		0096E19F21E2ED27009D517E /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096E19E21E2ED27009D517E /* FeedDetailViewController.swift */; };
+		00E896D021E0E8DE00409F69 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E896CF21E0E8DE00409F69 /* WalkthroughViewController.swift */; };
+		00E896D321E0E8FF00409F69 /* GoBearCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E896D121E0E8F700409F69 /* GoBearCore.framework */; };
+		00E896D421E0E8FF00409F69 /* GoBearCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 00E896D121E0E8F700409F69 /* GoBearCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		00E896DE21E0EF5B00409F69 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E896DD21E0EF5B00409F69 /* Constant.swift */; };
+		00E896E121E0F50000409F69 /* WalkthroughPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E896DF21E0F50000409F69 /* WalkthroughPageCell.swift */; };
+		00E896E221E0F50000409F69 /* WalkthroughPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00E896E021E0F50000409F69 /* WalkthroughPageCell.xib */; };
 		F4D4377197F5607F3EC98573 /* Pods_GoBear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5773DEC8D34945C656697BDE /* Pods_GoBear.framework */; };
 		FA1A280D7893507E4BA09B81 /* Pods_GoBearUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F50F3F85E76AAE0D00B4BAF /* Pods_GoBearUITests.framework */; };
 /* End PBXBuildFile section */
@@ -27,10 +46,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		00E896D521E0E8FF00409F69 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				00E896D421E0E8FF00409F69 /* GoBearCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		002BA50E21DF743A00005237 /* GoBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		002BA51121DF743A00005237 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		002BA51321DF743A00005237 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		002BA51321DF743A00005237 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		002BA51621DF743A00005237 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		002BA51821DF743A00005237 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		002BA51B21DF743A00005237 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +71,24 @@
 		002BA52221DF743B00005237 /* GoBearUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoBearUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		002BA52621DF743B00005237 /* GoBearUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBearUITests.swift; sourceTree = "<group>"; };
 		002BA52821DF743B00005237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0096E17421E1A06A009D517E /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		0096E17721E1A19A009D517E /* GoBearTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBearTextField.swift; sourceTree = "<group>"; };
+		0096E17921E1A3B0009D517E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0096E17B21E1A543009D517E /* KeyboardObserveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserveViewController.swift; sourceTree = "<group>"; };
+		0096E17E21E1A59B009D517E /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
+		0096E18121E1A8E5009D517E /* GoBearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBearButton.swift; sourceTree = "<group>"; };
+		0096E18821E1D63D009D517E /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		0096E18B21E1D6CC009D517E /* GoBearAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBearAlertController.swift; sourceTree = "<group>"; };
+		0096E18D21E1EF13009D517E /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		0096E19621E250D7009D517E /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		0096E19721E250D7009D517E /* FeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
+		0096E19A21E25ABC009D517E /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
+		0096E19E21E2ED27009D517E /* FeedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewController.swift; sourceTree = "<group>"; };
+		00E896CF21E0E8DE00409F69 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
+		00E896D121E0E8F700409F69 /* GoBearCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoBearCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E896DD21E0EF5B00409F69 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		00E896DF21E0F50000409F69 /* WalkthroughPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageCell.swift; sourceTree = "<group>"; };
+		00E896E021E0F50000409F69 /* WalkthroughPageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalkthroughPageCell.xib; sourceTree = "<group>"; };
 		0F50F3F85E76AAE0D00B4BAF /* Pods_GoBearUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoBearUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		482D219DD1049BD87416EC55 /* Pods-GoBearUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoBearUITests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-GoBearUITests/Pods-GoBearUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5773DEC8D34945C656697BDE /* Pods_GoBear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoBear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +103,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4D4377197F5607F3EC98573 /* Pods_GoBear.framework in Frameworks */,
+				00E896D321E0E8FF00409F69 /* GoBearCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,12 +141,10 @@
 		002BA51021DF743A00005237 /* GoBear */ = {
 			isa = PBXGroup;
 			children = (
+				002BA53821DF77E500005237 /* Constants */,
+				002BA53321DF779600005237 /* Resources */,
+				002BA53721DF77C300005237 /* Sources */,
 				002BA51121DF743A00005237 /* AppDelegate.swift */,
-				002BA51321DF743A00005237 /* ViewController.swift */,
-				002BA51521DF743A00005237 /* Main.storyboard */,
-				002BA51821DF743A00005237 /* Assets.xcassets */,
-				002BA51A21DF743A00005237 /* LaunchScreen.storyboard */,
-				002BA51D21DF743A00005237 /* Info.plist */,
 			);
 			path = GoBear;
 			sourceTree = "<group>";
@@ -106,6 +156,153 @@
 				002BA52821DF743B00005237 /* Info.plist */,
 			);
 			path = GoBearUITests;
+			sourceTree = "<group>";
+		};
+		002BA53321DF779600005237 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				002BA53521DF77AE00005237 /* Storyboards */,
+				002BA53421DF77A100005237 /* Assets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		002BA53421DF77A100005237 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				002BA51821DF743A00005237 /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		002BA53521DF77AE00005237 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				002BA51521DF743A00005237 /* Main.storyboard */,
+				002BA51A21DF743A00005237 /* LaunchScreen.storyboard */,
+				0096E17421E1A06A009D517E /* Authentication.storyboard */,
+				0096E19A21E25ABC009D517E /* Feed.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		002BA53721DF77C300005237 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0096E17D21E1A58E009D517E /* Managers */,
+				00E896CB21E0CF8900409F69 /* Controller */,
+				00E896CA21E0CF8500409F69 /* View */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		002BA53821DF77E500005237 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				002BA53921DF77ED00005237 /* Plist */,
+				00E896DD21E0EF5B00409F69 /* Constant.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		002BA53921DF77ED00005237 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				002BA51D21DF743A00005237 /* Info.plist */,
+			);
+			name = Plist;
+			sourceTree = "<group>";
+		};
+		0096E17621E1A159009D517E /* GoBearTextField */ = {
+			isa = PBXGroup;
+			children = (
+				0096E17721E1A19A009D517E /* GoBearTextField.swift */,
+			);
+			name = GoBearTextField;
+			sourceTree = "<group>";
+		};
+		0096E17D21E1A58E009D517E /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0096E17E21E1A59B009D517E /* KeyboardManager.swift */,
+				0096E18821E1D63D009D517E /* AlertManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		0096E18021E1A8CE009D517E /* GoBearButton */ = {
+			isa = PBXGroup;
+			children = (
+				0096E18121E1A8E5009D517E /* GoBearButton.swift */,
+			);
+			name = GoBearButton;
+			sourceTree = "<group>";
+		};
+		0096E18A21E1D699009D517E /* GoBearAlert */ = {
+			isa = PBXGroup;
+			children = (
+				0096E18B21E1D6CC009D517E /* GoBearAlertController.swift */,
+			);
+			name = GoBearAlert;
+			sourceTree = "<group>";
+		};
+		0096E19521E250B9009D517E /* FeedCell */ = {
+			isa = PBXGroup;
+			children = (
+				0096E19621E250D7009D517E /* FeedCell.swift */,
+				0096E19721E250D7009D517E /* FeedCell.xib */,
+			);
+			name = FeedCell;
+			sourceTree = "<group>";
+		};
+		00E896CA21E0CF8500409F69 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				00E896CD21E0CFA500409F69 /* GoBear */,
+				00E896CC21E0CF9F00409F69 /* Common */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		00E896CB21E0CF8900409F69 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				002BA51321DF743A00005237 /* RootViewController.swift */,
+				00E896CF21E0E8DE00409F69 /* WalkthroughViewController.swift */,
+				0096E17921E1A3B0009D517E /* LoginViewController.swift */,
+				0096E17B21E1A543009D517E /* KeyboardObserveViewController.swift */,
+				0096E18D21E1EF13009D517E /* FeedViewController.swift */,
+				0096E19E21E2ED27009D517E /* FeedDetailViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		00E896CC21E0CF9F00409F69 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0096E18021E1A8CE009D517E /* GoBearButton */,
+				0096E17621E1A159009D517E /* GoBearTextField */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		00E896CD21E0CFA500409F69 /* GoBear */ = {
+			isa = PBXGroup;
+			children = (
+				0096E19521E250B9009D517E /* FeedCell */,
+				0096E18A21E1D699009D517E /* GoBearAlert */,
+				00E896CE21E0CFC200409F69 /* WalkthroughCollectionView */,
+			);
+			name = GoBear;
+			sourceTree = "<group>";
+		};
+		00E896CE21E0CFC200409F69 /* WalkthroughCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				00E896DF21E0F50000409F69 /* WalkthroughPageCell.swift */,
+				00E896E021E0F50000409F69 /* WalkthroughPageCell.xib */,
+			);
+			name = WalkthroughCollectionView;
 			sourceTree = "<group>";
 		};
 		7C27843DCCB6859A85ACF8B5 /* Pods */ = {
@@ -122,6 +319,7 @@
 		D5B3BB010AD75CF3A6DE8C5C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				00E896D121E0E8F700409F69 /* GoBearCore.framework */,
 				5773DEC8D34945C656697BDE /* Pods_GoBear.framework */,
 				0F50F3F85E76AAE0D00B4BAF /* Pods_GoBearUITests.framework */,
 			);
@@ -140,6 +338,7 @@
 				002BA50B21DF743A00005237 /* Frameworks */,
 				002BA50C21DF743A00005237 /* Resources */,
 				F77FCF5026819EBF57C5F659 /* [CP] Embed Pods Frameworks */,
+				00E896D521E0E8FF00409F69 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,8 +412,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				002BA51C21DF743A00005237 /* LaunchScreen.storyboard in Resources */,
+				0096E19B21E25ABC009D517E /* Feed.storyboard in Resources */,
+				00E896E221E0F50000409F69 /* WalkthroughPageCell.xib in Resources */,
 				002BA51921DF743A00005237 /* Assets.xcassets in Resources */,
+				0096E19921E250D7009D517E /* FeedCell.xib in Resources */,
 				002BA51721DF743A00005237 /* Main.storyboard in Resources */,
+				0096E17521E1A06A009D517E /* Authentication.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,8 +465,10 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -272,8 +477,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -309,8 +516,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				002BA51421DF743A00005237 /* ViewController.swift in Sources */,
+				00E896D021E0E8DE00409F69 /* WalkthroughViewController.swift in Sources */,
+				0096E18921E1D63D009D517E /* AlertManager.swift in Sources */,
+				002BA51421DF743A00005237 /* RootViewController.swift in Sources */,
 				002BA51221DF743A00005237 /* AppDelegate.swift in Sources */,
+				0096E19F21E2ED27009D517E /* FeedDetailViewController.swift in Sources */,
+				0096E17A21E1A3B0009D517E /* LoginViewController.swift in Sources */,
+				0096E17C21E1A543009D517E /* KeyboardObserveViewController.swift in Sources */,
+				0096E18C21E1D6CC009D517E /* GoBearAlertController.swift in Sources */,
+				0096E19821E250D7009D517E /* FeedCell.swift in Sources */,
+				00E896DE21E0EF5B00409F69 /* Constant.swift in Sources */,
+				00E896E121E0F50000409F69 /* WalkthroughPageCell.swift in Sources */,
+				0096E17821E1A19A009D517E /* GoBearTextField.swift in Sources */,
+				0096E17F21E1A59B009D517E /* KeyboardManager.swift in Sources */,
+				0096E18E21E1EF13009D517E /* FeedViewController.swift in Sources */,
+				0096E18221E1A8E5009D517E /* GoBearButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
