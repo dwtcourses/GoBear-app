@@ -16,6 +16,15 @@ public final class UserObj: NSObject, NSCoding {
     public private(set) var password: String
     public private(set) var isRemember: Bool
     
+    public var isRememberMe: Bool {
+        get {
+            return isRemember
+        }
+        set {
+            isRemember = newValue
+        }
+    }
+    
     public init(username: String, password: String, isRemember: Bool) {
         self.username = username
         self.password = password
