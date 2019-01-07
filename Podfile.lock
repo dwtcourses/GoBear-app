@@ -8,6 +8,7 @@ PODS:
   - SDWebImage (4.4.3):
     - SDWebImage/Core (= 4.4.3)
   - SDWebImage/Core (4.4.3)
+  - SwiftSoup (1.7.4)
   - SWXMLHash (4.7.6)
 
 DEPENDENCIES:
@@ -15,6 +16,7 @@ DEPENDENCIES:
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
   - SDWebImage (~> 4.0)
+  - SwiftSoup
   - SWXMLHash (~> 4.7.0)
 
 SPEC REPOS:
@@ -24,6 +26,7 @@ SPEC REPOS:
     - RxCocoa
     - RxSwift
     - SDWebImage
+    - SwiftSoup
     - SWXMLHash
 
 SPEC CHECKSUMS:
@@ -32,8 +35,9 @@ SPEC CHECKSUMS:
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
+  SwiftSoup: 92f5b348c131aed8af04f4326db1579ab19fa08c
   SWXMLHash: f6e0933ce74f2626669dc544851bc9fc1941670d
 
-PODFILE CHECKSUM: f46866de23d4ea9fb2f6a7196151d1f6e70937ed
+PODFILE CHECKSUM: 5a608e3c902b7bbb5f6b2680c47291f559900b23
 
 COCOAPODS: 1.5.3

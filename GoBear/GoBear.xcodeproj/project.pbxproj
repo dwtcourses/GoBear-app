@@ -25,6 +25,7 @@
 		0096E19821E250D7009D517E /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096E19621E250D7009D517E /* FeedCell.swift */; };
 		0096E19921E250D7009D517E /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0096E19721E250D7009D517E /* FeedCell.xib */; };
 		0096E19B21E25ABC009D517E /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0096E19A21E25ABC009D517E /* Feed.storyboard */; };
+		0096E19F21E2ED27009D517E /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096E19E21E2ED27009D517E /* FeedDetailViewController.swift */; };
 		00E896D021E0E8DE00409F69 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E896CF21E0E8DE00409F69 /* WalkthroughViewController.swift */; };
 		00E896D321E0E8FF00409F69 /* GoBearCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E896D121E0E8F700409F69 /* GoBearCore.framework */; };
 		00E896D421E0E8FF00409F69 /* GoBearCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 00E896D121E0E8F700409F69 /* GoBearCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -82,6 +83,7 @@
 		0096E19621E250D7009D517E /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		0096E19721E250D7009D517E /* FeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
 		0096E19A21E25ABC009D517E /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
+		0096E19E21E2ED27009D517E /* FeedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewController.swift; sourceTree = "<group>"; };
 		00E896CF21E0E8DE00409F69 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
 		00E896D121E0E8F700409F69 /* GoBearCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoBearCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E896DD21E0EF5B00409F69 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				0096E17921E1A3B0009D517E /* LoginViewController.swift */,
 				0096E17B21E1A543009D517E /* KeyboardObserveViewController.swift */,
 				0096E18D21E1EF13009D517E /* FeedViewController.swift */,
+				0096E19E21E2ED27009D517E /* FeedDetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -476,6 +480,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -515,6 +520,7 @@
 				0096E18921E1D63D009D517E /* AlertManager.swift in Sources */,
 				002BA51421DF743A00005237 /* RootViewController.swift in Sources */,
 				002BA51221DF743A00005237 /* AppDelegate.swift in Sources */,
+				0096E19F21E2ED27009D517E /* FeedDetailViewController.swift in Sources */,
 				0096E17A21E1A3B0009D517E /* LoginViewController.swift in Sources */,
 				0096E17C21E1A543009D517E /* KeyboardObserveViewController.swift in Sources */,
 				0096E18C21E1D6CC009D517E /* GoBearAlertController.swift in Sources */,

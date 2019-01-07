@@ -15,6 +15,7 @@ class FeedViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Variable
+    fileprivate var coordinator: ViewModelCoordinatorProtocol!
     fileprivate var viewModel: GoBearServiceViewModelProtocol!
     fileprivate var products = [ProductObj]()
     
@@ -28,6 +29,7 @@ class FeedViewController: BaseViewController {
     
     class func `init`(coordinator: ViewModelCoordinatorProtocol) -> FeedViewController {
         let viewController = FeedViewController.fromStoryboard(Constant.Storyboard.Feed) as! FeedViewController
+        viewController.coordinator = coordinator
         viewController.viewModel = coordinator.goBearServiceViewModel
         return viewController
     }
@@ -48,6 +50,21 @@ class FeedViewController: BaseViewController {
                 self.tableView.reloadData()
             }).disposed(by: disposeBag)
     }
+    
+    @IBAction func pressedLogoutButton(_ sender: UIButton) {
+        GoBearAuth.share.logout()
+        
+        self.navigationController?.viewControllers.removeAll()
+        
+        let rootViewController = RootViewController.init(coordinator: coordinator)
+        rootViewController.binding()
+        
+        let window = UIApplication.shared.delegate?.window
+        
+        window??.makeKeyAndVisible()
+        window??.rootViewController = rootViewController
+        
+    }
 }
 
 extension FeedViewController: UITableViewDataSource {
@@ -61,5 +78,14 @@ extension FeedViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: FeedCell.identifier, for: indexPath) as! FeedCell
         cell.configure(products[indexPath.row])
         return cell
+    }
+}
+
+extension FeedViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let viewController = FeedDetailViewController.init(coordinator: coordinator)
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
