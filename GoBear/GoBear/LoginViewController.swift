@@ -56,7 +56,7 @@ class LoginViewController: KeyboardObserveViewController {
             .asObservable()
             .bind { isSuccess in
                 if isSuccess {
-                    
+                    self.navigateToFeed()
                 }
             }.disposed(by: disposeBag)
         
@@ -72,6 +72,7 @@ class LoginViewController: KeyboardObserveViewController {
     }
     
     fileprivate func navigateToFeed() {
-        
+        let viewController = FeedViewController.init(coordinator: coordinator)
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

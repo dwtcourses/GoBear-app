@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 
 public class GoBearAuth {
-
+    
     // MARK: - Variable
     public var usernameFieldViewModel = GoBearUsernameField()
     public var passwordFieldViewModel = GoBearPasswordField()
@@ -33,7 +33,7 @@ public class GoBearAuth {
     // MARK : - Current User
     public fileprivate(set) var currentUserVariable = Variable<UserObj?>(nil)
     public var currentUser: UserObj? { return currentUserVariable.value }
-    public var authenStateObj: Observable<AuthenticationState>
+    public var authenStateObj: Observable<AuthenticationState?>
     
     // Lock
     fileprivate let lock = NSLock()
@@ -46,7 +46,7 @@ public class GoBearAuth {
             .distinctUntilChanged()
         
         // Load disk
-        loadPersistantUser()
+        loadPersistantStoreUser()
         
         currentUserVariable.asObservable()
             .subscribe(onNext: { [unowned self] (userObj) in
@@ -138,7 +138,7 @@ extension GoBearAuth {
 // MARK: - Authentication
 extension GoBearAuth {
     
-    fileprivate func loadPersistantUser() {
+    fileprivate func loadPersistantStoreUser() {
         
         // Lock
         lock.lock()
@@ -146,20 +146,15 @@ extension GoBearAuth {
             self.lock.unlock()
         }
         
-        guard let data = UserDefaults.standard.data(forKey: GoBearAuth.PersistantStoreKey) else {
-            self.savePersistantUser(UserObj.defaultUser())
+        guard let data = persistantStore.data(forKey: GoBearAuth.PersistantStoreKey) else {
             return
         }
         
-        guard let userObj = try? NSKeyedUnarchiver.unarchivedObject(ofClass: UserObj.self, from: data) else {
+        guard let userObj = NSKeyedUnarchiver.unarchiveObject(with: data) as? UserObj else {
             return
         }
         
-        guard let _userObj = userObj, _userObj.isRemember else {
-            return
-        }
-        
-        currentUserVariable.value = _userObj
+        currentUserVariable.value = userObj
     }
     
     fileprivate func savePersistantUser(_ userObj: UserObj?) {
@@ -176,7 +171,7 @@ extension GoBearAuth {
                 return
             }
             
-            let data = try? NSKeyedArchiver.archivedData(withRootObject: userObj, requiringSecureCoding: true)
+            let data = NSKeyedArchiver.archivedData(withRootObject: userObj)
             persistantStore.set(data, forKey: GoBearAuth.PersistantStoreKey)
             persistantStore.synchronize()
             
@@ -198,5 +193,18 @@ extension GoBearAuth {
         
         self.isSuccess.value = true
         currentUserVariable.value = userObj
+    }
+    
+    public func logout() {
+        
+        // Lock
+        lock.lock()
+        defer {
+            self.lock.unlock()
+        }
+        
+        savePersistantUser(nil)
+        isSuccess.value = false
+        currentUserVariable.value = nil
     }
 }

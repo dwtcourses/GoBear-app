@@ -31,7 +31,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YP9-n1-XQD">
-                                                <rect key="frame" x="32" y="170" width="311" height="200"/>
+                                                <rect key="frame" x="32" y="170" width="311" height="240"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fL5-oM-8mY" userLabel="Cover TextField">
                                                         <rect key="frame" x="0.0" y="0.0" width="311" height="100"/>
@@ -65,13 +65,13 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SZh-k9-MmH" userLabel="Cover Remember me">
-                                                        <rect key="frame" x="0.0" y="100" width="311" height="50"/>
+                                                        <rect key="frame" x="0.0" y="100" width="311" height="70"/>
                                                         <subviews>
-                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dX8-gH-zaw">
-                                                                <rect key="frame" x="0.0" y="9.5" width="51" height="31"/>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dX8-gH-zaw">
+                                                                <rect key="frame" x="64" y="19.5" width="51" height="31"/>
                                                             </switch>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tg6-Dc-xw3">
-                                                                <rect key="frame" x="65" y="15" width="109" height="20.5"/>
+                                                                <rect key="frame" x="129" y="25" width="109" height="20.5"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -79,18 +79,18 @@
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="9dp-ug-SYA"/>
+                                                            <constraint firstAttribute="height" constant="70" id="9dp-ug-SYA"/>
                                                             <constraint firstItem="dX8-gH-zaw" firstAttribute="centerY" secondItem="SZh-k9-MmH" secondAttribute="centerY" id="VKb-Yp-9YQ"/>
                                                             <constraint firstItem="Tg6-Dc-xw3" firstAttribute="centerY" secondItem="dX8-gH-zaw" secondAttribute="centerY" id="aN8-iH-YYO"/>
-                                                            <constraint firstItem="dX8-gH-zaw" firstAttribute="leading" secondItem="SZh-k9-MmH" secondAttribute="leading" multiplier="1:2" id="bJG-rU-bk9"/>
+                                                            <constraint firstItem="dX8-gH-zaw" firstAttribute="leading" secondItem="SZh-k9-MmH" secondAttribute="leading" constant="64" id="bJG-rU-bk9"/>
                                                             <constraint firstItem="Tg6-Dc-xw3" firstAttribute="leading" secondItem="dX8-gH-zaw" secondAttribute="trailing" constant="16" id="imK-1D-Qds"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GjL-Lj-K9N" userLabel="Cover Button">
-                                                        <rect key="frame" x="0.0" y="150" width="311" height="50"/>
+                                                        <rect key="frame" x="0.0" y="170" width="311" height="70"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLs-Vz-Dn7" customClass="GoBearButton" customModule="GoBear" customModuleProvider="target">
-                                                                <rect key="frame" x="105.5" y="0.0" width="100" height="50"/>
+                                                                <rect key="frame" x="105.5" y="0.0" width="100" height="70"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="100" id="wKo-Ka-K8v"/>
                                                                 </constraints>
@@ -105,7 +105,7 @@
                                                             <constraint firstItem="qLs-Vz-Dn7" firstAttribute="top" secondItem="GjL-Lj-K9N" secondAttribute="top" id="5GB-sh-ArK"/>
                                                             <constraint firstAttribute="bottom" secondItem="qLs-Vz-Dn7" secondAttribute="bottom" id="Udl-Zl-muh"/>
                                                             <constraint firstItem="qLs-Vz-Dn7" firstAttribute="centerX" secondItem="GjL-Lj-K9N" secondAttribute="centerX" id="gtt-rw-gX0"/>
-                                                            <constraint firstAttribute="height" constant="50" id="oVm-Gc-1a3"/>
+                                                            <constraint firstAttribute="height" constant="70" id="oVm-Gc-1a3"/>
                                                             <constraint firstItem="qLs-Vz-Dn7" firstAttribute="centerY" secondItem="GjL-Lj-K9N" secondAttribute="centerY" id="xjZ-AB-p07"/>
                                                         </constraints>
                                                     </view>
