@@ -14,7 +14,6 @@ class RootViewController: UINavigationController {
     
     //    MARK:- Variables
     fileprivate var viewModel: AppViewModelProtocol?
-    fileprivate var authenViewModel: AuthenticationViewModelProtocol?
     fileprivate var coordinator: ViewModelCoordinatorProtocol!
     
     fileprivate lazy var disposeBag = DisposeBag()
@@ -22,6 +21,8 @@ class RootViewController: UINavigationController {
     //    MARK:- View Controller Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewControllers = [WalkthroughViewController.init(coordinator: coordinator!)]
     }
     
     override func didReceiveMemoryWarning() {
@@ -35,29 +36,9 @@ class RootViewController: UINavigationController {
     class func `init`(coordinator: ViewModelCoordinatorProtocol) -> RootViewController {
         let viewController = RootViewController.fromStoryboard(Constant.Storyboard.Main) as! RootViewController
         viewController.coordinator = coordinator
-        viewController.authenViewModel = coordinator.authenticationViewModel
         viewController.viewModel = coordinator.appViewModel
         return viewController
     }
     
-    public func binding() {
-        
-        authenViewModel?.output.authenticationStateDriver
-            .asObservable()
-            .subscribe(onNext: { (authenState) in
-                self.setupContentController(authenState: authenState)
-            }).disposed(by: disposeBag)
-    }
-    
-    //    MARK:- Init
-    fileprivate func setupContentController(authenState: AuthenticationState) {
-        
-        viewControllers = [FeedViewController.init(coordinator: coordinator!)]
-//        switch authenState {
-//        case .authenticated:
-//            viewControllers = [LoginViewController.init(coordinator: coordinator!)]
-//        case .unAuthenticated:
-//            viewControllers = [WalkthroughViewController.init(coordinator: coordinator!)]
-//        }
-    }
+    public func binding() { }
 }

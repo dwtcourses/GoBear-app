@@ -25,7 +25,7 @@ public final class UserObj: NSObject, NSCoding {
     @objc required public init?(coder aDecoder: NSCoder) {
         username = aDecoder.decodeObject(forKey: Constant.Object.User.Username) as! String
         password = aDecoder.decodeObject(forKey: Constant.Object.User.Password) as! String
-        isRemember = aDecoder.decodeObject(forKey: Constant.Object.User.IsRemember) as! Bool
+        isRemember = aDecoder.decodeBool(forKey: Constant.Object.User.IsRemember)
         super.init()
     }
     

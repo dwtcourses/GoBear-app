@@ -17,6 +17,7 @@ class WalkthroughViewController: BaseViewController {
     
     // MARK:- Variable
     fileprivate var coordinator: ViewModelCoordinatorProtocol!
+    fileprivate var authenViewModel: AuthenticationViewModelProtocol?
     fileprivate let contents = [Constant.Label.Text1, Constant.Label.Text2, Constant.Label.Text3]
     
     // MARK:- View Controller Cycle
@@ -37,6 +38,7 @@ class WalkthroughViewController: BaseViewController {
     class func `init`(coordinator: ViewModelCoordinatorProtocol) -> WalkthroughViewController {
         let viewController = WalkthroughViewController.fromStoryboard(Constant.Storyboard.Main) as! WalkthroughViewController
         viewController.coordinator = coordinator
+        viewController.authenViewModel = coordinator.authenticationViewModel
         return viewController
     }
     
@@ -48,17 +50,32 @@ class WalkthroughViewController: BaseViewController {
             return
         }
         
-        print(self.collectionView.frame.height)
-        collectionViewLayout.itemSize = CGSize(width: self.view.frame.width, height: 594 ) //self.collectionView.frame.height
+        collectionViewLayout.itemSize = CGSize(width: self.view.frame.width, height: self.collectionView.frame.height)
     }
     
     @IBAction func pressedSkipButton(_ sender: UIButton) {
         
+        authenViewModel?.output.authenticationStateDriver
+            .asObservable()
+            .subscribe(onNext: { (authenState) in
+                print(authenState)
+                self.setupContentController(authenState: authenState!)
+            }).disposed(by: disposeBag)
     }
     
     @IBAction func pressedPageControlButton(_ sender: UIButton) {
         let indexPath = IndexPath(item: 0, section: sender.tag)
         self.collectionView.scrollToItem(at: indexPath, at: .right, animated: true)
+    }
+    
+    fileprivate func setupContentController(authenState: AuthenticationState) {
+        
+        switch authenState {
+        case .authenticated:
+            navigationController?.viewControllers = [FeedViewController.init(coordinator: coordinator!)]
+        case .unAuthenticated:
+            navigationController?.viewControllers = [LoginViewController.init(coordinator: coordinator!)]
+        }
     }
 }
 

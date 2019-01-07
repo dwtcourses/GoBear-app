@@ -27,7 +27,7 @@ public protocol AuthenticationViewModelInput {
 
 public protocol AuthenticationViewModelOutput {
     
-    var authenticationStateDriver: Driver<AuthenticationState> { get }
+    var authenticationStateDriver: Driver<AuthenticationState?> { get }
     var isSuccess: Variable<Bool> { get }
     var errorMessage: Variable<String?> { get }
 }
@@ -51,7 +51,7 @@ public final class AuthenticationViewModel: AuthenticationViewModelProtocol,
     public var isRememberBool: Variable<Bool> { return GoBearAuth.share.isRememberVariable }
     
     // MARK: - Output Protocol
-    public var authenticationStateDriver: Driver<AuthenticationState>
+    public var authenticationStateDriver: Driver<AuthenticationState?>
     public var isSuccess: Variable<Bool> { return GoBearAuth.share.isSuccess }
     public var errorMessage: Variable<String?> { return GoBearAuth.share.errorVariable }
     
@@ -59,6 +59,6 @@ public final class AuthenticationViewModel: AuthenticationViewModelProtocol,
     public init() {
         
         let authenticateChanged = GoBearAuth.share.authenStateObj
-        authenticationStateDriver = authenticateChanged.asDriver(onErrorJustReturn: AuthenticationState.unAuthenticated)
+        authenticationStateDriver = authenticateChanged.asDriver(onErrorJustReturn: nil)
     }
 }
