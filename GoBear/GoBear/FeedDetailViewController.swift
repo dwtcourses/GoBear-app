@@ -15,35 +15,60 @@ class FeedDetailViewController: BaseViewController {
     
     // MARK:- IBOutlet
     @IBOutlet weak var wkWebview: WKWebView!
-    @IBOutlet weak var lblContent: UILabel!
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     
     // MARK: - Variable
     fileprivate var viewModel: GoBearServiceViewModelProtocol!
-    var document: Document = Document.init("")
+    fileprivate var document: Document = Document.init("")
+    fileprivate var feed: ProductObj?
     
     // MARK:- View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setupUI()
-        self.binding()
     }
     
-    class func `init`(feedLink: String, coordinator: ViewModelCoordinatorProtocol) -> FeedDetailViewController {
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.loadPage()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
+    
+    class func `init`(feed: ProductObj, coordinator: ViewModelCoordinatorProtocol) -> FeedDetailViewController {
         let viewController = FeedDetailViewController.fromStoryboard(Constant.Storyboard.Feed) as! FeedDetailViewController
         viewController.viewModel = coordinator.goBearServiceViewModel
+        viewController.feed = feed
         return viewController
     }
     
     fileprivate func setupUI() {
         
-        self.loadPage()
+        // MARK: - Navigation bar setup
+        self.title = feed?.title ?? ""
+        navigationController?.isNavigationBarHidden = false
+        navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.isNavigationBarHidden = false
+        if #available(iOS 11.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = false
+        }
     }
     
     func loadPage() {
-        // url string to URL
-        guard let url = URL(string: "https://www.bbc.com/news/world-asia-46772155") else {
-            // an error occurred
+        
+        guard let urlString = feed?.link else {
+            AlertManager.nativeAlertWithTitle("Error", message: "Can not get product link", cancelButtonTitle: "Cancel").showAlertInController(self)
+            return
+        }
+        
+        guard let url = URL(string: urlString) else {
             return
         }
         
@@ -51,48 +76,21 @@ class FeedDetailViewController: BaseViewController {
             
             let html = try String.init(contentsOf: url)
             
-            document = try parse(html)
+            document = try parseBodyFragment(html)
             
-            
-            guard let contentStory = try document.body()?.getElementById("page")?.child(0).child(1).child(0).child(0).child(0).child(2) else {
-                return
+            if let head = try document.head()?.html() {
+                wkWebview.loadHTMLString(head, baseURL: URL(string: urlString))
             }
             
-//            .getElementsByClass("story-body")
             
-             lblContent.attributedText = try contentStory.outerHtml().html2Attributed
+            if let fullStory = try document.getElementById("page")?.getElementsByClass("story-body__inner").html() {
+                wkWebview.loadHTMLString(fullStory, baseURL: URL(string: urlString))
+            }
+            
+            indicator.stopAnimating()
             
         } catch let error {
             print(error)
         }
     }
-    
-    fileprivate func binding() {
-        
-//        viewModel.input.startFetchProductPublisher.onNext(true)
-//
-//        viewModel.output.productVariable
-//            .asObservable()
-//            .subscribe(onNext: { (products) in
-//
-//            }).disposed(by: disposeBag)
-    }
 }
-
-extension String {
-    var html2Attributed: NSAttributedString? {
-        do {
-            guard let data = data(using: String.Encoding.utf8) else {
-                return nil
-            }
-            return try NSAttributedString(data: data,
-                                          options: [.documentType: NSAttributedString.DocumentType.html,
-                                                    .characterEncoding: String.Encoding.utf8.rawValue],
-                                          documentAttributes: nil)
-        } catch {
-            print("error: ", error)
-            return nil
-        }
-    }
-}
-

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m6s-l2-V9J">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -74,49 +74,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="map-a8-9ic">
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3If-55-H8L">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B3J-2t-bJV">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfN-97-pQ0">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="LfN-97-pQ0" secondAttribute="trailing" id="Lo5-LW-WcV"/>
-                                            <constraint firstItem="LfN-97-pQ0" firstAttribute="top" secondItem="B3J-2t-bJV" secondAttribute="top" id="PPc-wG-W2F"/>
-                                            <constraint firstItem="LfN-97-pQ0" firstAttribute="leading" secondItem="B3J-2t-bJV" secondAttribute="leading" id="XtB-5L-R0K"/>
-                                            <constraint firstAttribute="bottom" secondItem="LfN-97-pQ0" secondAttribute="bottom" id="nuP-Rx-N96"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="B3J-2t-bJV" firstAttribute="leading" secondItem="map-a8-9ic" secondAttribute="leading" id="Vgl-a5-zwn"/>
-                                    <constraint firstItem="B3J-2t-bJV" firstAttribute="top" secondItem="map-a8-9ic" secondAttribute="top" id="eyM-HT-lFi"/>
-                                    <constraint firstAttribute="bottom" secondItem="B3J-2t-bJV" secondAttribute="bottom" id="g3n-Q7-m0O"/>
-                                    <constraint firstAttribute="trailing" secondItem="B3J-2t-bJV" secondAttribute="trailing" id="yBL-EF-KHw"/>
-                                </constraints>
-                            </scrollView>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" video="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="cUH-5S-v2K">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="B3J-2t-bJV" firstAttribute="height" secondItem="4PZ-XE-3J3" secondAttribute="height" id="LyN-rl-HK7"/>
-                            <constraint firstItem="wCR-pK-vtO" firstAttribute="bottom" secondItem="map-a8-9ic" secondAttribute="bottom" id="Shx-hE-clK"/>
-                            <constraint firstItem="wCR-pK-vtO" firstAttribute="trailing" secondItem="map-a8-9ic" secondAttribute="trailing" id="YcJ-Px-d4M"/>
-                            <constraint firstItem="map-a8-9ic" firstAttribute="top" secondItem="wCR-pK-vtO" secondAttribute="top" id="jpB-Mw-k9h"/>
-                            <constraint firstItem="map-a8-9ic" firstAttribute="leading" secondItem="wCR-pK-vtO" secondAttribute="leading" id="s1q-A4-BsZ"/>
-                            <constraint firstItem="B3J-2t-bJV" firstAttribute="width" secondItem="4PZ-XE-3J3" secondAttribute="width" id="sGp-ip-Ocy"/>
+                            <constraint firstItem="cUH-5S-v2K" firstAttribute="centerY" secondItem="4PZ-XE-3J3" secondAttribute="centerY" id="7qZ-dd-WTa"/>
+                            <constraint firstItem="3If-55-H8L" firstAttribute="leading" secondItem="wCR-pK-vtO" secondAttribute="leading" id="7uj-zz-qPu"/>
+                            <constraint firstItem="3If-55-H8L" firstAttribute="trailing" secondItem="wCR-pK-vtO" secondAttribute="trailing" id="HMo-1I-CVJ"/>
+                            <constraint firstItem="cUH-5S-v2K" firstAttribute="centerX" secondItem="4PZ-XE-3J3" secondAttribute="centerX" id="UKd-k7-B12"/>
+                            <constraint firstItem="wCR-pK-vtO" firstAttribute="bottom" secondItem="3If-55-H8L" secondAttribute="bottom" id="ukL-BT-H4I"/>
+                            <constraint firstItem="3If-55-H8L" firstAttribute="top" secondItem="wCR-pK-vtO" secondAttribute="top" id="vby-eH-ehA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wCR-pK-vtO"/>
                     </view>
                     <connections>
-                        <outlet property="lblContent" destination="LfN-97-pQ0" id="mov-kl-wIQ"/>
+                        <outlet property="indicator" destination="cUH-5S-v2K" id="gp0-bF-ucX"/>
+                        <outlet property="wkWebview" destination="3If-55-H8L" id="Xnv-nM-P6L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w4T-Qa-njC" userLabel="First Responder" sceneMemberID="firstResponder"/>

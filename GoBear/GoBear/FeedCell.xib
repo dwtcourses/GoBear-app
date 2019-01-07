@@ -35,14 +35,6 @@
                             <constraint firstAttribute="width" constant="80" id="a6v-Xf-Htb"/>
                             <constraint firstItem="thY-If-XmC" firstAttribute="top" secondItem="cRF-G2-N1w" secondAttribute="top" id="bhd-CW-sUo"/>
                         </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                <real key="value" value="3"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                <color key="value" red="0.68627450980000004" green="0.47843137250000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bvk-3o-0lG">
                         <rect key="frame" x="112" y="24" width="247" height="15.5"/>

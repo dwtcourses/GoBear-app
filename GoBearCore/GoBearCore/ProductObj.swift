@@ -16,6 +16,7 @@ public final class ProductObj: XMLElementDeserializable {
     public private(set) var pubDate: String?
     public private(set) var thumbnail: String?
     public private(set) var description: String?
+    public private(set) var link: String?
     
     // MARK: - Init
     public required init(_ node: XMLIndexer) throws {
@@ -24,20 +25,19 @@ public final class ProductObj: XMLElementDeserializable {
         self.pubDate     = try node[Constant.Object.Product.PublicDate].value()
         self.thumbnail   = node[Constant.Object.Product.Thumbnail].element?.attribute(by: Constant.Object.Product.Url)?.text
         self.description = try node[Constant.Object.Product.Description].value()
+        self.link        = try node[Constant.Object.Product.Link].value()
     }
     
     public init(title: String?,
                 pubDate: String?,
                 thumbnail: String?,
-                description: String?) {
+                description: String?,
+                link: String?) {
         
         self.title       = title
         self.pubDate     = pubDate
         self.thumbnail   = thumbnail
         self.description = description
-    }
-    
-    func reformatDate() {
-        
+        self.link        = link
     }
 }

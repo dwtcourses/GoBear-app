@@ -22,7 +22,7 @@ class RootViewController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewControllers = [WalkthroughViewController.init(coordinator: coordinator!)]
+        viewControllers = [WalkthroughViewController.init(coordinator: coordinator)]
     }
     
     override func didReceiveMemoryWarning() {
