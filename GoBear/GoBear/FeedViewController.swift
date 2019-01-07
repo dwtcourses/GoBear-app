@@ -18,6 +18,7 @@ class FeedViewController: BaseViewController {
     fileprivate var coordinator: ViewModelCoordinatorProtocol!
     fileprivate var viewModel: GoBearServiceViewModelProtocol!
     fileprivate var products = [ProductObj]()
+    fileprivate let refreshControl = UIRefreshControl()
     
     // MARK:- View life cycle
     override func viewDidLoad() {
@@ -37,6 +38,16 @@ class FeedViewController: BaseViewController {
     fileprivate func setupUI() {
         
         self.tableView.registerCell(FeedCell.self)
+        
+        // Add Refresh Control to Table View
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refreshControl
+        } else {
+            tableView.addSubview(refreshControl)
+        }
+        
+        // Configure Refresh Control
+        refreshControl.addTarget(self, action: #selector(refreshProductsData(_:)), for: .valueChanged)
     }
     
     fileprivate func binding() {
@@ -48,6 +59,7 @@ class FeedViewController: BaseViewController {
             .subscribe(onNext: { (products) in
                 self.products = products
                 self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
             }).disposed(by: disposeBag)
     }
     
@@ -64,6 +76,12 @@ class FeedViewController: BaseViewController {
         window??.makeKeyAndVisible()
         window??.rootViewController = rootViewController
         
+    }
+    
+    @objc private func refreshProductsData(_ sender: Any) {
+        
+        // Fetch Weather Data
+        binding()
     }
 }
 
@@ -85,7 +103,9 @@ extension FeedViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let viewController = FeedDetailViewController.init(coordinator: coordinator)
+        let product = products[indexPath.row]
+        
+        let viewController = FeedDetailViewController.init(feed: product, coordinator: coordinator)
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

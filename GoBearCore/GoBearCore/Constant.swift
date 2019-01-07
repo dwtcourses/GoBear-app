@@ -53,6 +53,7 @@ struct Constant {
             static let Thumbnail = "media:thumbnail"
             static let Url = "url"
             static let Description = "description"
+            static let Link = "link"
         }
     }
     

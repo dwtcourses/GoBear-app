@@ -58,7 +58,6 @@ class WalkthroughViewController: BaseViewController {
         authenViewModel?.output.authenticationStateDriver
             .asObservable()
             .subscribe(onNext: { (authenState) in
-                print(authenState)
                 self.setupContentController(authenState: authenState!)
             }).disposed(by: disposeBag)
     }
